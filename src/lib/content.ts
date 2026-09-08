@@ -11,7 +11,7 @@ export const nav: Bilingual[] = [
 ];
 
 export const hero = {
-  name: ["JESÚS GABRIEL", "AHUMADA"],
+  name: ["JESUS GABRIEL", "AHUMADA"],
   role: {
     es: "Software Engineer | Fullstack Javascript Developer",
     en: "Software Engineer | Fullstack Javascript Developer",
@@ -26,7 +26,10 @@ export const about = {
     es: "Más de 6 años trabajando con JavaScript/TypeScript, con foco en frontend a escala. Vue 3 y React en la interfaz, Node y Express de soporte, y experiencia construyendo productos que necesitan crecer sin romperse. Cloud (AWS) y código mantenible como base de todo.",
     en: "6+ years in the JavaScript/TypeScript ecosystem, focused on frontend at scale. Vue 3 and React on the interface, Node and Express underneath, and experience building products that need to grow without breaking. Cloud (AWS) and maintainable code underpin it all.",
   } satisfies Bilingual,
-  cvHref: "/cv/jesus-gabriel-ahumada-cv.pdf",
+  cvHref: {
+    es: "/cv/jesus-gabriel-ahumada-cv-es.pdf",
+    en: "/cv/jesus-gabriel-ahumada-cv-en.pdf",
+  } satisfies Bilingual,
   cvLabel: { es: "Descargar CV", en: "Download CV" } satisfies Bilingual,
   stackLabel: "Stack",
   stack: [
@@ -97,8 +100,8 @@ export const career = {
       role: "Sr. Frontend Developer",
       company: "Ginko Financial Solutions",
       desc: {
-        es: "Banca empresarial para cuatro entidades desde un único código base, con Vue 3 y Composition API.",
-        en: "Corporate banking for four institutions from a single codebase, with Vue 3 and the Composition API.",
+        es: "Lidero el rediseño BOCC 360 y la iniciativa de SSO para Banco de Occidente, sobre una plataforma que sirve a cuatro entidades desde un único código base. +95% de cumplimiento de entregas por sprint.",
+        en: "Leading the BOCC 360 redesign and the SSO initiative for Banco de Occidente, on a platform serving four institutions from a single codebase. 95%+ sprint delivery compliance.",
       } satisfies Bilingual,
     },
     {
@@ -108,8 +111,8 @@ export const career = {
       role: "Staff Engineer",
       company: "Altimetrik · GoDaddy",
       desc: {
-        es: "Biblioteca de componentes React de la home de GoDaddy y varias actualizaciones clave.",
-        en: "React component library behind GoDaddy's homepage, plus several key upgrades.",
+        es: "Desarrollé la biblioteca de componentes React detrás de la home de GoDaddy.com y ejecuté la migración a React 18.",
+        en: "Developed the React component library behind GoDaddy.com's homepage and carried out the React 18 migration.",
       } satisfies Bilingual,
     },
     {
@@ -119,8 +122,8 @@ export const career = {
       role: "Sr. Developer",
       company: "Teleperformance",
       desc: {
-        es: "UI y servicios REST para apps usadas a nivel mundial. Helpdesk embebible y seguimiento de agentes.",
-        en: "UI and REST services for apps used worldwide. Embeddable helpdesk and agent tracking.",
+        es: "Construí herramientas internas usadas por agentes y supervisores en varios países, haciendo la operación diaria más simple y visible.",
+        en: "Built internal tools used by agents and supervisors across multiple countries, making day-to-day operations simpler and more visible.",
       } satisfies Bilingual,
     },
     {
@@ -130,8 +133,8 @@ export const career = {
       role: "Frontend Jr.",
       company: "Develop App",
       desc: {
-        es: "Interfaces a partir de diseños previos, servicios REST y piezas de UI reutilizables.",
-        en: "Interfaces from existing designs, REST services and reusable UI pieces.",
+        es: "Pasé por proyectos para clientes de industrias muy distintas, tocando desde UI hasta integraciones backend en cada uno.",
+        en: "Worked on projects for clients across very different industries, touching everything from UI to backend integrations in each one.",
       } satisfies Bilingual,
     },
   ],
@@ -195,8 +198,8 @@ export const contact = {
   links: [
     {
       label: { es: "Email", en: "Email" } satisfies Bilingual,
-      value: "jesus15202009@gmail.com",
-      href: "mailto:jesus15202009@gmail.com",
+      value: "contact@jesusgabriel.dev",
+      href: "mailto:contact@jesusgabriel.dev",
       external: false,
     },
     {

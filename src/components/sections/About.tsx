@@ -44,7 +44,7 @@ export function About() {
           })}
         </div>
         <a
-          href={about.cvHref}
+          href={t(about.cvHref)}
           download
           className="mt-6 inline-flex items-center gap-2 border-2 border-cream bg-cream px-4 py-2.5 font-mono text-xs uppercase tracking-[0.1em] no-underline transition-opacity hover:no-underline hover:opacity-80"
           style={{ color: "var(--color-ink)" }}

@@ -26,7 +26,7 @@ export function Header({
           style={{ objectPosition: "50% 22%" }}
         />
         <span className="hidden whitespace-nowrap font-display text-[clamp(12px,1.5vw,15px)] tracking-[-0.01em] md:inline">
-          JESÚS GABRIEL
+          JESUS GABRIEL
         </span>
       </div>
 
