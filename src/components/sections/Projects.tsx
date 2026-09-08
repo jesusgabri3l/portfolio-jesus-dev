@@ -6,7 +6,10 @@ export function Projects() {
   const cards = Array.from({ length: projects.count }, (_, i) => i + 1);
 
   return (
-    <section className="flex h-full w-screen flex-none items-center bg-ink px-[clamp(24px,5vw,80px)] py-[90px] text-cream">
+    <section
+      id="projects"
+      className="flex min-h-screen w-full flex-none items-center bg-ink px-[clamp(24px,5vw,80px)] py-[90px] text-cream md:h-full md:w-screen"
+    >
       <div className="w-full">
         <div className="mb-2.5 font-mono text-[clamp(10px,1.2vw,12px)] uppercase tracking-[0.18em] opacity-55">
           {projects.eyebrowNum} — {t(projects.eyebrow)}
@@ -14,7 +17,7 @@ export function Projects() {
         <h2 className="mb-5 font-display text-[clamp(24px,3.2vw,44px)] leading-[0.95] tracking-[-0.02em]">
           {t(projects.title)}
         </h2>
-        <div className="grid grid-cols-5 gap-px bg-cream/22">
+        <div className="grid grid-cols-2 gap-px bg-cream/22 sm:grid-cols-3 md:grid-cols-5">
           {cards.map((n) => (
             <article
               key={n}

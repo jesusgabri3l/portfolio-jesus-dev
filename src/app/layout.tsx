@@ -1,6 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Archivo_Black, Manrope, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+
+const SITE_URL = "https://jesusgabriel.dev";
 
 const archivoBlack = Archivo_Black({
   variable: "--font-archivo-black",
@@ -20,19 +22,57 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
+const TITLE = "Jesús Gabriel Ahumada — Fullstack JavaScript Software Engineer";
+const DESCRIPTION =
+  "Software Engineer with 6+ years in the JavaScript/TypeScript ecosystem — Vue 3, React, Node.js and AWS, building products for banking, e-commerce and internal tools used worldwide.";
+
 export const metadata: Metadata = {
-  title: "Jesús Gabriel Ahumada — Fullstack JavaScript Software Engineer",
-  description:
-    "Portfolio de Jesús Gabriel Ahumada, Fullstack JavaScript Software Engineer.",
-  icons: {
-    icon: "/images/avatar.png",
+  metadataBase: new URL(SITE_URL),
+  title: TITLE,
+  description: DESCRIPTION,
+  keywords: [
+    "Jesús Gabriel Ahumada",
+    "Software Engineer",
+    "Fullstack Developer",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Vue 3",
+    "Node.js",
+    "AWS",
+  ],
+  authors: [{ name: "Jesús Gabriel Ahumada", url: SITE_URL }],
+  alternates: {
+    canonical: SITE_URL,
   },
+  openGraph: {
+    type: "website",
+    url: SITE_URL,
+    title: TITLE,
+    description: DESCRIPTION,
+    siteName: "Jesús Gabriel Ahumada",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#F4F1E8",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="es"
+      lang="en"
       className={`${archivoBlack.variable} ${manrope.variable} ${jetbrainsMono.variable}`}
     >
       <body>{children}</body>

@@ -6,7 +6,10 @@ export function Contact() {
   const { t } = useLang();
 
   return (
-    <section className="relative flex h-full w-screen flex-none items-center overflow-hidden bg-cream px-[clamp(24px,6vw,90px)] py-[90px] text-ink">
+    <section
+      id="contact"
+      className="relative flex min-h-screen w-full flex-none items-center overflow-hidden bg-cream px-[clamp(24px,6vw,90px)] py-[90px] pb-[280px] text-ink md:h-full md:w-screen md:pb-[90px]"
+    >
       <Image
         src="/images/pose-contact.png"
         alt=""

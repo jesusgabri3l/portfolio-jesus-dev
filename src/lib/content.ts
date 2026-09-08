@@ -23,9 +23,11 @@ export const about = {
   eyebrow: { es: "Sobre mí", en: "About" } satisfies Bilingual,
   title: "SOFTWARE ENGINEER",
   paragraph: {
-    es: "Más de 6 años en el ecosistema JavaScript, construyendo interfaces y servicios para banca, e-commerce y herramientas internas de uso global. Trabajo de punta a punta: Vue y React en el frontend, Node y Express en el backend, TypeScript en todo el camino, y nube para sostenerlo.",
-    en: "6+ years in the JavaScript ecosystem, building interfaces and services for banking, e-commerce and internal tools used worldwide. End to end: Vue and React on the frontend, Node and Express on the backend, TypeScript all the way through, and cloud to keep it running.",
+    es: "Más de 6 años trabajando con JavaScript/TypeScript, con foco en frontend a escala. Vue 3 y React en la interfaz, Node y Express de soporte, y experiencia construyendo productos que necesitan crecer sin romperse. Cloud (AWS) y código mantenible como base de todo.",
+    en: "6+ years in the JavaScript/TypeScript ecosystem, focused on frontend at scale. Vue 3 and React on the interface, Node and Express underneath, and experience building products that need to grow without breaking. Cloud (AWS) and maintainable code underpin it all.",
   } satisfies Bilingual,
+  cvHref: "/cv/jesus-gabriel-ahumada-cv.pdf",
+  cvLabel: { es: "Descargar CV", en: "Download CV" } satisfies Bilingual,
   stackLabel: "Stack",
   stack: [
     { slug: "vuedotjs", label: "Vue 3" },
@@ -47,34 +49,34 @@ export const services = {
   items: [
     {
       num: "01",
-      title: { es: "Desarrollo Frontend", en: "Frontend Development" } satisfies Bilingual,
+      title: { es: "Desarrollo de aplicaciones web", en: "Web application development" } satisfies Bilingual,
       desc: {
-        es: "Interfaces en Vue o React, del prototipo a producción, con componentes reutilizables y buen rendimiento.",
-        en: "Interfaces in Vue or React, from prototype to production, with reusable components and solid performance.",
+        es: "Tu producto de punta a punta: interfaz, backend y todo lo que hay en medio. Del primer prototipo a algo que tus usuarios usan todos los días.",
+        en: "Your product end to end: interface, backend, and everything in between. From first prototype to something your users rely on daily.",
       } satisfies Bilingual,
     },
     {
       num: "02",
-      title: { es: "APIs y Backend", en: "APIs and Backend" } satisfies Bilingual,
+      title: { es: "Páginas web y landing pages", en: "Websites and landing pages" } satisfies Bilingual,
       desc: {
-        es: "Servicios REST con Node y Express, integraciones y lógica de negocio pensada para escalar.",
-        en: "REST services with Node and Express, integrations and business logic built to scale.",
+        es: "Sitios rápidos, responsivos y que se ven bien en cualquier dispositivo — para presentar tu negocio, lanzar un producto o captar clientes.",
+        en: "Fast, responsive sites that look good on any device — to present your business, launch a product, or bring in customers.",
       } satisfies Bilingual,
     },
     {
       num: "03",
-      title: { es: "Sistemas de diseño", en: "Design Systems" } satisfies Bilingual,
+      title: { es: "Desarrollo de Sistemas de diseño", en: "Design System Development" } satisfies Bilingual,
       desc: {
-        es: "Bibliotecas de componentes consistentes que varios equipos pueden compartir y mantener.",
-        en: "Consistent component libraries multiple teams can share and maintain.",
+        es: "Componentes reutilizables para tu marca, documentados en Storybook para que tu equipo los reutilice en toda la aplicación sin adivinar cómo funcionan.",
+        en: "Reusable components for your brand, documented in Storybook so your team can reuse them across the entire application without guessing how they work.",
       } satisfies Bilingual,
     },
     {
       num: "04",
-      title: { es: "Migraciones y mantenimiento", en: "Migrations and maintenance" } satisfies Bilingual,
+      title: { es: "Mantenimiento y actualización", en: "Maintenance & upgrades" } satisfies Bilingual,
       desc: {
-        es: "Actualización de versiones, refactor de código base y arreglo de deuda técnica, sin frenar el producto.",
-        en: "Version upgrades, codebase refactors and paying down tech debt without stopping the product.",
+        es: "Actualizo versiones, ordeno código base y arreglo deuda técnica sin frenar tu producto optimizando el tiempo a través del uso de IA en el proceso.",
+        en: "I update versions, clean up code bases, and fix technical debt without stopping your product, optimizing turnaround time through the use of AI in my process.",
       } satisfies Bilingual,
     },
   ],
@@ -85,7 +87,7 @@ export const career = {
   eyebrow: { es: "Trayectoria", en: "Career" } satisfies Bilingual,
   title: {
     es: "CARRERA PROFESIONAL",
-    en: "SIX YEARS, FOUR TEAMS",
+    en: "CAREER",
   } satisfies Bilingual,
   roles: [
     {
@@ -161,10 +163,16 @@ export const education = {
   ],
   certificationsLabel: { es: "Certificaciones", en: "Certifications" } satisfies Bilingual,
   certifications: [
-    { slug: "aws", label: "Certified Cloud Practitioner" },
-    { slug: "javascript", label: "Certified JavaScript Developer" },
-    { slug: "jest", label: "JavaScript Unit Testing" },
-    { slug: "react", label: "React (Basic)" },
+    {
+      slug: "aws",
+      label: "Certified Cloud Practitioner",
+      href: "https://www.credly.com/badges/6045d8d2-c442-4e21-a6b4-d7ad1b0a11a0/public_url",
+    },
+    {
+      slug: "javascript",
+      label: "Certified JavaScript Developer",
+      href: "https://verify.w3schools.com/5YKCAWXY5",
+    },
   ],
 };
 

@@ -5,7 +5,10 @@ export function Career() {
   const { t } = useLang();
 
   return (
-    <section className="flex h-full w-screen flex-none items-center bg-ink px-[clamp(24px,6vw,90px)] py-[90px] text-cream">
+    <section
+      id="career"
+      className="flex min-h-screen w-full flex-none items-center bg-ink px-[clamp(24px,6vw,90px)] py-[90px] text-cream md:h-full md:w-screen"
+    >
       <div className="flex w-full flex-col gap-[18px]">
         <div>
           <div className="mb-3 font-mono text-[clamp(10px,1.2vw,12px)] uppercase tracking-[0.18em] opacity-55">
@@ -15,12 +18,12 @@ export function Career() {
             {t(career.title)}
           </h2>
         </div>
-        <div className="grid grid-cols-4 gap-x-px bg-cream/22">
+        <div className="grid grid-cols-1 gap-x-px bg-cream/22 md:grid-cols-4">
           {career.roles.map((r, i) => (
             <div
               key={r.role}
               className={`border-t-2 border-cream bg-ink py-[18px] px-5 ${
-                i === 0 ? "pl-0" : ""
+                i === 0 ? "md:pl-0" : ""
               }`}
             >
               <div className="flex items-center gap-2.5 font-mono text-[11px] tracking-[0.08em] opacity-65">

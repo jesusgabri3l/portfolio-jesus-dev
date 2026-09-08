@@ -6,7 +6,10 @@ export function About() {
   const { t } = useLang();
 
   return (
-    <section className="flex h-full w-screen flex-none items-center overflow-hidden bg-ink px-[clamp(24px,6vw,90px)] py-[90px] text-cream">
+    <section
+      id="about"
+      className="flex min-h-screen w-full flex-none items-center overflow-hidden bg-ink px-[clamp(24px,6vw,90px)] py-[90px] text-cream md:h-full md:w-screen"
+    >
       <div className="w-full max-w-[900px]">
         <div className="mb-3 font-mono text-[clamp(10px,1.2vw,12px)] uppercase tracking-[0.18em] opacity-60">
           {about.eyebrowNum} — {t(about.eyebrow)}
@@ -29,7 +32,7 @@ export function About() {
                 className="flex items-center gap-2.5 border border-cream/40 px-3.5 py-2.5"
               >
                 {Icon ? (
-                  <Icon size={20} className="block" />
+                  <Icon size={20} className="block" aria-hidden="true" />
                 ) : (
                   <span className="font-display text-[11px] tracking-[-0.02em]">
                     {item.label}
@@ -40,6 +43,14 @@ export function About() {
             );
           })}
         </div>
+        <a
+          href={about.cvHref}
+          download
+          className="mt-6 inline-flex items-center gap-2 border-2 border-cream bg-cream px-4 py-2.5 font-mono text-xs uppercase tracking-[0.1em] no-underline transition-opacity hover:no-underline hover:opacity-80"
+          style={{ color: "var(--color-ink)" }}
+        >
+          {t(about.cvLabel)}
+        </a>
       </div>
     </section>
   );

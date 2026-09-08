@@ -7,7 +7,10 @@ export function Education() {
   const { t } = useLang();
 
   return (
-    <section className="relative flex h-full w-screen flex-none items-center overflow-hidden bg-cream px-[clamp(24px,6vw,90px)] py-[90px] text-ink">
+    <section
+      id="education"
+      className="relative flex min-h-screen w-full flex-none items-center overflow-hidden bg-cream px-[clamp(24px,6vw,90px)] py-[90px] pb-[280px] text-ink md:h-full md:w-screen md:pb-[90px]"
+    >
       <Image
         src="/images/pose-education.png"
         alt=""
@@ -23,7 +26,7 @@ export function Education() {
           <h2 className="mb-5 font-display text-[clamp(24px,3.4vw,44px)] leading-[0.95] tracking-[-0.02em]">
             {t(education.title)}
           </h2>
-          <div className="grid grid-cols-2 gap-[clamp(18px,3vw,40px)]">
+          <div className="grid grid-cols-1 gap-[clamp(18px,3vw,40px)] sm:grid-cols-2">
             <div>
               <div className="mb-3 font-mono text-[10px] uppercase tracking-[0.16em] opacity-55">
                 {t(education.degreesLabel)}
@@ -43,19 +46,24 @@ export function Education() {
                 {education.certifications.map((c) => {
                   const Icon = stackIcons[c.slug];
                   return (
-                    <div
+                    <a
                       key={c.label}
-                      className="flex items-center gap-2.5 border border-ink/30 px-3 py-2.5"
+                      href={c.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center gap-2.5 border border-ink/30 px-3 py-2.5 transition-colors hover:border-ink hover:bg-ink/5"
                     >
                       {Icon ? (
-                        <Icon size={18} className="flex-none" />
+                        <Icon size={18} className="flex-none" aria-hidden="true" />
                       ) : (
                         <span className="flex-none font-display text-[11px]">
                           {c.slug.toUpperCase()}
                         </span>
                       )}
-                      <span className="text-[12.5px] leading-[1.3]">{c.label}</span>
-                    </div>
+                      <span className="text-[12.5px] leading-[1.3] underline decoration-ink/40 underline-offset-2">
+                        {c.label}
+                      </span>
+                    </a>
                   );
                 })}
               </div>
