@@ -26,6 +26,9 @@ export function Hero() {
           <div className="font-mono text-[clamp(11px,1.35vw,15px)] uppercase tracking-[0.1em]">
             {t(hero.role)}
           </div>
+          <div className="mt-2 font-mono text-[clamp(11px,1.35vw,15px)] uppercase tracking-[0.1em] opacity-60">
+            {t(hero.tagline)}
+          </div>
         </div>
         <Image
           src="/images/pose-hero.png"

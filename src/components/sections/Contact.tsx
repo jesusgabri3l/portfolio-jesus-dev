@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { contact } from "@/lib/content";
 import { useLang } from "@/lib/lang-context";
+import { Button } from "@/components/Button";
 
 export function Contact() {
   const { t } = useLang();
@@ -25,6 +26,9 @@ export function Contact() {
           <h2 className="mb-6.5 font-display text-[clamp(40px,7vw,96px)] leading-[0.85] tracking-[-0.03em]">
             {t(contact.title)}
           </h2>
+          <div className="mb-5 font-mono text-[10px] uppercase tracking-[0.14em]">
+            {contact.location} · {t(contact.availability)}
+          </div>
           <div className="flex max-w-[460px] flex-col gap-3.5">
             {contact.links.map((link) => (
               <a
@@ -41,9 +45,9 @@ export function Contact() {
               </a>
             ))}
           </div>
-          <div className="mt-6 font-mono text-[11px] tracking-[0.08em] opacity-50">
-            {contact.location} · {t(contact.availability)}
-          </div>
+          <Button href={t(contact.cvHref)} download sectionBg="light" variant="secondary" className="mt-6">
+            {t(contact.cvLabel)}
+          </Button>
         </div>
       </div>
     </section>

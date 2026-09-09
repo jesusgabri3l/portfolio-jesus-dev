@@ -16,6 +16,10 @@ export const hero = {
     es: "Software Engineer | Fullstack Javascript Developer",
     en: "Software Engineer | Fullstack Javascript Developer",
   } satisfies Bilingual,
+  tagline: {
+    es: "6+ años entregando productos web",
+    en: "6+ years shipping web products",
+  } satisfies Bilingual,
 };
 
 export const about = {
@@ -23,14 +27,9 @@ export const about = {
   eyebrow: { es: "Sobre mí", en: "About" } satisfies Bilingual,
   title: "SOFTWARE ENGINEER",
   paragraph: {
-    es: "Más de 6 años trabajando con JavaScript/TypeScript, con foco en frontend a escala. Vue 3 y React en la interfaz, Node y Express de soporte, y experiencia construyendo productos que necesitan crecer sin romperse. Cloud (AWS) y código mantenible como base de todo.",
-    en: "6+ years in the JavaScript/TypeScript ecosystem, focused on frontend at scale. Vue 3 and React on the interface, Node and Express underneath, and experience building products that need to grow without breaking. Cloud (AWS) and maintainable code underpin it all.",
+    es: "Construyo aplicaciones web que funcionan en condiciones reales: rápidas, estables y fáciles de mantener. Trabajo el producto completo, desde la interfaz que ve el usuario hasta lo que se ejecuta detrás. Si tu producto está creciendo más rápido que su código, ese es el tipo de trabajo que me interesa.",
+    en: "I build web products that hold up under real use: fast, stable, and easy to change. That means taking them end to end, from what the user touches to what runs behind it. If your product is growing faster than its codebase, that's the kind of work I like.",
   } satisfies Bilingual,
-  cvHref: {
-    es: "/cv/jesus-gabriel-ahumada-cv-es.pdf",
-    en: "/cv/jesus-gabriel-ahumada-cv-en.pdf",
-  } satisfies Bilingual,
-  cvLabel: { es: "Descargar CV", en: "Download CV" } satisfies Bilingual,
   stackLabel: "Stack",
   stack: [
     { slug: "vuedotjs", label: "Vue 3" },
@@ -38,7 +37,7 @@ export const about = {
     { slug: "typescript", label: "TypeScript" },
     { slug: "nodedotjs", label: "Node.js" },
     { slug: "express", label: "Express" },
-    { slug: "aws", label: "AWS" },
+    { slug: "cloud", label: "Cloud" },
   ],
 };
 
@@ -78,11 +77,13 @@ export const services = {
       num: "04",
       title: { es: "Mantenimiento y actualización", en: "Maintenance & upgrades" } satisfies Bilingual,
       desc: {
-        es: "Actualizo versiones, ordeno código base y arreglo deuda técnica sin frenar tu producto optimizando el tiempo a través del uso de IA en el proceso.",
-        en: "I update versions, clean up code bases, and fix technical debt without stopping your product, optimizing turnaround time through the use of AI in my process.",
+        es: "Actualizo versiones, ordeno código base y arreglo deuda técnica sin frenar tu producto.",
+        en: "I update versions, clean up code bases, and fix technical debt without stopping your product.",
       } satisfies Bilingual,
     },
   ],
+  ctaLine: { es: "¿Necesitas algo así?", en: "Need something like this?" } satisfies Bilingual,
+  ctaButton: { es: "Hablemos", en: "Let's talk" } satisfies Bilingual,
 };
 
 export const career = {
@@ -122,8 +123,8 @@ export const career = {
       role: "Sr. Developer",
       company: "Teleperformance",
       desc: {
-        es: "Construí herramientas internas usadas por agentes y supervisores en varios países, haciendo la operación diaria más simple y visible.",
-        en: "Built internal tools used by agents and supervisors across multiple countries, making day-to-day operations simpler and more visible.",
+        es: "Desarrollé herramientas internas para agentes y supervisores en varios países, reemplazando procesos manuales por tableros que la operación usaba a diario.",
+        en: "Built internal tools for agents and supervisors across multiple countries, replacing manual processes with dashboards the operation used daily.",
       } satisfies Bilingual,
     },
     {
@@ -133,8 +134,8 @@ export const career = {
       role: "Frontend Jr.",
       company: "Develop App",
       desc: {
-        es: "Pasé por proyectos para clientes de industrias muy distintas, tocando desde UI hasta integraciones backend en cada uno.",
-        en: "Worked on projects for clients across very different industries, touching everything from UI to backend integrations in each one.",
+        es: "Entregué proyectos web para clientes de retail, logística y servicios, trabajando en todo el stack en cada uno.",
+        en: "Delivered web projects for clients in retail, logistics and services, working across the full stack on each one.",
       } satisfies Bilingual,
     },
   ],
@@ -183,8 +184,8 @@ export const projects = {
   eyebrowNum: "05",
   eyebrow: { es: "Proyectos", en: "Projects" } satisfies Bilingual,
   title: {
-    es: "LO QUE HAGO CUANDO NADIE ME LO PIDE",
-    en: "WHAT I BUILD WHEN NOBODY ASKS",
+    es: "PROYECTOS",
+    en: "THINGS I'VE BUILT",
   } satisfies Bilingual,
   placeholderTitle: "Nombre del proyecto",
   placeholderDesc: "Qué hace, en una frase.",
@@ -217,4 +218,9 @@ export const contact = {
   ],
   location: "Barranquilla, Colombia",
   availability: { es: "disponible remoto", en: "available remote" } satisfies Bilingual,
+  cvHref: {
+    es: "/cv/jesus-gabriel-ahumada-cv-es.pdf",
+    en: "/cv/jesus-gabriel-ahumada-cv-en.pdf",
+  } satisfies Bilingual,
+  cvLabel: { es: "Descargar CV", en: "Download CV" } satisfies Bilingual,
 };

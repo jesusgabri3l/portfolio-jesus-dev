@@ -1,7 +1,8 @@
 import { services } from "@/lib/content";
 import { useLang } from "@/lib/lang-context";
+import { Button } from "@/components/Button";
 
-export function Services() {
+export function Services({ onContactClick }: { onContactClick?: () => void }) {
   const { t } = useLang();
 
   return (
@@ -31,6 +32,12 @@ export function Services() {
               <p className="text-[13px] leading-[1.5] opacity-85">{t(item.desc)}</p>
             </div>
           ))}
+        </div>
+        <div className="mt-9 flex flex-wrap items-center gap-4">
+          <span className="font-display text-[clamp(16px,1.8vw,22px)]">{t(services.ctaLine)}</span>
+          <Button sectionBg="light" onClick={onContactClick}>
+            {t(services.ctaButton)}
+          </Button>
         </div>
       </div>
     </section>

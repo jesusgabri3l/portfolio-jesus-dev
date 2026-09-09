@@ -111,7 +111,7 @@ export function HorizontalScroller() {
         <div className="flex flex-col">
           <Hero />
           <About />
-          <Services />
+          <Services onContactClick={() => goTo(SECTION_IDS.indexOf("contact"))} />
           <Career />
           <Education />
           <Projects />
@@ -135,7 +135,7 @@ export function HorizontalScroller() {
           <motion.div className="flex h-full w-max items-stretch" style={{ x }}>
             <Hero />
             <About />
-            <Services />
+            <Services onContactClick={() => goTo(SECTION_IDS.indexOf("contact"))} />
             <Career />
             <Education />
             <Projects />

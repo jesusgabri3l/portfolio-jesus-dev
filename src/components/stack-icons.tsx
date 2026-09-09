@@ -7,6 +7,7 @@ import {
   SiJavascript,
   SiJest,
 } from "react-icons/si";
+import { FaCloud } from "react-icons/fa";
 import type { IconType } from "react-icons";
 
 export const stackIcons: Record<string, IconType | undefined> = {
@@ -17,4 +18,5 @@ export const stackIcons: Record<string, IconType | undefined> = {
   express: SiExpress,
   javascript: SiJavascript,
   jest: SiJest,
+  cloud: FaCloud,
 };
