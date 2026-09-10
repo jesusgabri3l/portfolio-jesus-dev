@@ -244,14 +244,14 @@ export const projects = {
       repos: [{ label: "ip-geolocator", href: "https://github.com/jesusgabri3l/ip-geolocator" }],
     },
     {
-      title: "Weather App",
+      title: "PaintIt",
       desc: {
-        es: "Dashboard del clima con React y Redux Toolkit sobre la API abierta Open-Meteo — guarda ciudades en un carrusel con datos en vivo, sin login ni API key.",
-        en: "Weather dashboard built with React and Redux Toolkit on the keyless Open-Meteo API — save cities to a live card-carousel, no login or API key needed.",
+        es: "Pizarra minimalista para dibujar a mano alzada con mouse o tableta gráfica — colores, grosor de pincel, deshacer y descarga del boceto, con atajos de teclado.",
+        en: "Minimalist whiteboard app to draw freehand with mouse or graphic tablet — pick colors, adjust brush size, undo, and download your sketch, with keyboard shortcuts.",
       } satisfies Bilingual,
-      stack: ["React", "Redux Toolkit", "TypeScript"],
-      demoHref: "https://jesusgabri3l.github.io/weather-app/",
-      repos: [{ label: "weather-app", href: "https://github.com/jesusgabri3l/weather-app" }],
+      stack: ["React", "TypeScript", "Canvas API"],
+      demoHref: "https://jesusgabri3l.github.io/paintIt/",
+      repos: [{ label: "paintIt", href: "https://github.com/jesusgabri3l/paintIt" }],
     },
   ],
 };
