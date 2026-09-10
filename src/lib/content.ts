@@ -187,9 +187,73 @@ export const projects = {
     es: "PROYECTOS",
     en: "THINGS I'VE BUILT",
   } satisfies Bilingual,
-  placeholderTitle: "Nombre del proyecto",
-  placeholderDesc: "Qué hace, en una frase.",
-  count: 10,
+  demoLabel: { es: "Demo", en: "Demo" } satisfies Bilingual,
+  codeLabel: { es: "Código", en: "Code" } satisfies Bilingual,
+  items: [
+    {
+      title: "Chat App",
+      desc: {
+        es: "Chat en tiempo real: frontend en React + Vite con Google Sign-In, backend en Express + Socket.IO sobre Firestore.",
+        en: "Realtime chat: React + Vite frontend with Google Sign-In, Express + Socket.IO backend on Firestore.",
+      } satisfies Bilingual,
+      stack: ["React", "TypeScript", "Node.js", "Express", "Socket.IO", "Firestore"],
+      demoHref: "https://jesusgabri3l.github.io/chat-app/",
+      repos: [
+        { label: "chat-app", href: "https://github.com/jesusgabri3l/chat-app" },
+        { label: "chat-app-backend", href: "https://github.com/jesusgabri3l/chat-app-backend" },
+      ],
+    },
+    {
+      title: "Spotify Clon",
+      desc: {
+        es: "Cliente de la Spotify Web API con React, TypeScript y MobX — explora tu biblioteca, busca artistas y discografías, autenticado con OAuth PKCE.",
+        en: "Spotify Web API client built with React, TypeScript and MobX — browse your library, search artists and discographies, authenticated via OAuth PKCE.",
+      } satisfies Bilingual,
+      stack: ["React", "TypeScript", "MobX", "OAuth PKCE"],
+      demoHref: "https://spotify-clon-jade.vercel.app/",
+      repos: [{ label: "spotify-clon", href: "https://github.com/jesusgabri3l/spotify-clon" }],
+    },
+    {
+      title: "Sandbox",
+      desc: {
+        es: "Editor de código en vivo tipo CodePen con HTML, CSS y JS sobre Monaco Editor — comparte todo el sandbox por URL, sin backend.",
+        en: "Live code editor like CodePen/JSFiddle with HTML, CSS and JS, powered by Monaco Editor — share the whole sandbox via URL, no backend.",
+      } satisfies Bilingual,
+      stack: ["React", "TypeScript", "Monaco Editor"],
+      demoHref: "https://jesusgabri3l.github.io/sandbox/",
+      repos: [{ label: "sandbox", href: "https://github.com/jesusgabri3l/sandbox" }],
+    },
+    {
+      title: "Memory Game",
+      desc: {
+        es: "Juego de memoria con temática Game of Thrones — elige tu casa y compite contra el reloj en niveles cada vez más difíciles.",
+        en: "Game of Thrones themed memory-matching game — pick your house and race the clock across increasingly harder levels.",
+      } satisfies Bilingual,
+      stack: ["React", "TypeScript"],
+      demoHref: "https://jesusgabri3l.github.io/memory-game/",
+      repos: [{ label: "memory-game", href: "https://github.com/jesusgabri3l/memory-game" }],
+    },
+    {
+      title: "IP Geolocator",
+      desc: {
+        es: "Rastreador de IPs con React, TypeScript y Leaflet — ubicación, zona horaria e ISP de cualquier IPv4 sobre un mapa interactivo.",
+        en: "IP address tracker built with React, TypeScript and Leaflet — location, timezone and ISP for any IPv4 on an interactive map.",
+      } satisfies Bilingual,
+      stack: ["React", "TypeScript", "Leaflet"],
+      demoHref: "https://jesusgabri3l.github.io/ip-geolocator/",
+      repos: [{ label: "ip-geolocator", href: "https://github.com/jesusgabri3l/ip-geolocator" }],
+    },
+    {
+      title: "Weather App",
+      desc: {
+        es: "Dashboard del clima con React y Redux Toolkit sobre la API abierta Open-Meteo — guarda ciudades en un carrusel con datos en vivo, sin login ni API key.",
+        en: "Weather dashboard built with React and Redux Toolkit on the keyless Open-Meteo API — save cities to a live card-carousel, no login or API key needed.",
+      } satisfies Bilingual,
+      stack: ["React", "Redux Toolkit", "TypeScript"],
+      demoHref: "https://jesusgabri3l.github.io/weather-app/",
+      repos: [{ label: "weather-app", href: "https://github.com/jesusgabri3l/weather-app" }],
+    },
+  ],
 };
 
 export const contact = {

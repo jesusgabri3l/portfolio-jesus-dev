@@ -3,6 +3,7 @@
 :root {
   --color-cream: #F4F1E8;
   --color-ink: #0D0D0D;
+  --header-h: 57px;
 }
 
 @theme inline {

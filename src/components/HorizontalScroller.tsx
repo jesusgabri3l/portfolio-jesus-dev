@@ -131,7 +131,7 @@ export function HorizontalScroller() {
         className="relative"
         style={{ height: travel + viewportHeight }}
       >
-        <div className="sticky top-0 h-screen overflow-hidden">
+        <div className="sticky top-[var(--header-h)] h-[calc(100vh-var(--header-h))] overflow-hidden">
           <motion.div className="flex h-full w-max items-stretch" style={{ x }}>
             <Hero />
             <About />

@@ -16,7 +16,7 @@ export function Education() {
         alt=""
         width={198}
         height={463}
-        className="absolute bottom-0 left-6 block w-[clamp(80px,8vw,120px)] h-auto opacity-90"
+        className="absolute bottom-0 left-6 block w-[clamp(80px,8vw,120px)] h-auto opacity-90 md:h-[clamp(120px,26vh,280px)] md:w-auto"
       />
       <div className="flex w-full items-center gap-[clamp(24px,4vw,60px)]">
         <div className="min-w-0 flex-1">
