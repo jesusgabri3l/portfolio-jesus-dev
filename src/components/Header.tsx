@@ -15,7 +15,11 @@ export function Header({
 
   return (
     <header className="fixed inset-x-0 top-0 z-40 flex items-center justify-between gap-3 border-b-2 border-ink bg-cream px-[clamp(14px,3vw,32px)] py-[11px]">
-      <div className="flex min-w-0 items-center gap-2.5">
+      <button
+        onClick={() => onNavClick(0)}
+        aria-label="Go to home"
+        className="flex min-w-0 cursor-pointer items-center gap-2.5"
+      >
         <Image
           src="/images/avatar.png"
           alt="Jesús Gabriel"
@@ -28,7 +32,7 @@ export function Header({
         <span className="hidden whitespace-nowrap font-display text-[clamp(12px,1.5vw,15px)] tracking-[-0.01em] md:inline">
           JESUS GABRIEL
         </span>
-      </div>
+      </button>
 
       <div className="flex min-w-0 items-center gap-2">
         <nav className="scrollbar-none hidden min-w-0 items-center gap-[clamp(8px,1.6vw,22px)] overflow-x-auto font-mono text-[clamp(9px,1.15vw,11px)] uppercase tracking-[0.08em] md:flex">
