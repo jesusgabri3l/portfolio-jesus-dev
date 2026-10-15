@@ -191,6 +191,16 @@ export const projects = {
   codeLabel: { es: "Código", en: "Code" } satisfies Bilingual,
   items: [
     {
+      title: "CEIBA",
+      desc: {
+        es: "Landing de café de especialidad contada como un recorrido de cámara: el scroll controla el video, del cafetal a la bolsa. Video por dispositivo (AV1/H.264), carga diferida y analítica de abandono por escena.",
+        en: "Specialty coffee landing told as one camera flight: scrolling drives the video, from the coffee farm to the bag. Per-device video (AV1/H.264), lazy loading and per-scene drop-off analytics.",
+      } satisfies Bilingual,
+      stack: ["Astro", "JavaScript", "Tailwind CSS", "Video scrubbing", "Umami"],
+      demoHref: "https://jesusgabri3l.github.io/ceiba/",
+      repos: [{ label: "ceiba", href: "https://github.com/jesusgabri3l/ceiba" }],
+    },
+    {
       title: "Chat App",
       desc: {
         es: "Chat en tiempo real: frontend en React + Vite con Google Sign-In, backend en Express + Socket.IO sobre Firestore.",
@@ -242,16 +252,6 @@ export const projects = {
       stack: ["React", "TypeScript", "Leaflet"],
       demoHref: "https://jesusgabri3l.github.io/ip-geolocator/",
       repos: [{ label: "ip-geolocator", href: "https://github.com/jesusgabri3l/ip-geolocator" }],
-    },
-    {
-      title: "PaintIt",
-      desc: {
-        es: "Pizarra minimalista para dibujar a mano alzada con mouse o tableta gráfica — colores, grosor de pincel, deshacer y descarga del boceto, con atajos de teclado.",
-        en: "Minimalist whiteboard app to draw freehand with mouse or graphic tablet — pick colors, adjust brush size, undo, and download your sketch, with keyboard shortcuts.",
-      } satisfies Bilingual,
-      stack: ["React", "TypeScript", "Canvas API"],
-      demoHref: "https://jesusgabri3l.github.io/paintIt/",
-      repos: [{ label: "paintIt", href: "https://github.com/jesusgabri3l/paintIt" }],
     },
   ],
 };
