@@ -104,35 +104,27 @@ export function HorizontalScroller() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isDesktop, viewportWidth]);
 
-  if (!isDesktop) {
-    return (
-      <>
-        <Header activeIndex={activeIndex} onNavClick={goTo} />
-        <div className="flex flex-col">
-          <Hero />
-          <About />
-          <Services onContactClick={() => goTo(SECTION_IDS.indexOf("contact"))} />
-          <Career />
-          <Education />
-          <Projects />
-          <Contact />
-        </div>
-      </>
-    );
-  }
-
   return (
     <>
       <Header activeIndex={activeIndex} onNavClick={goTo} />
-      <ProgressBar progress={scrollYProgress} />
+      {isDesktop && <ProgressBar progress={scrollYProgress} />}
 
       <div
         ref={containerRef}
-        className="relative"
-        style={{ height: travel + viewportHeight }}
+        className={isDesktop ? "relative" : undefined}
+        style={isDesktop ? { height: travel + viewportHeight } : undefined}
       >
-        <div className="sticky top-[var(--header-h)] h-[calc(100vh-var(--header-h))] overflow-hidden">
-          <motion.div className="flex h-full w-max items-stretch" style={{ x }}>
+        <div
+          className={
+            isDesktop
+              ? "sticky top-[var(--header-h)] h-[calc(100vh-var(--header-h))] overflow-hidden"
+              : undefined
+          }
+        >
+          <motion.div
+            className={isDesktop ? "flex h-full w-max items-stretch" : "flex flex-col"}
+            style={isDesktop ? { x } : undefined}
+          >
             <Hero />
             <About />
             <Services onContactClick={() => goTo(SECTION_IDS.indexOf("contact"))} />
