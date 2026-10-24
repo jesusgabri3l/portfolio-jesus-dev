@@ -37,7 +37,7 @@ export const about = {
     { slug: "typescript", label: "TypeScript" },
     { slug: "nodedotjs", label: "Node.js" },
     { slug: "express", label: "Express" },
-    { slug: "cloud", label: "Cloud" },
+    { slug: "aws", label: "AWS" },
   ],
 };
 
@@ -59,10 +59,10 @@ export const services = {
     },
     {
       num: "02",
-      title: { es: "Páginas web y landing pages", en: "Websites and landing pages" } satisfies Bilingual,
+      title: { es: "Experiencias web interactivas", en: "Interactive web experiences" } satisfies Bilingual,
       desc: {
-        es: "Sitios rápidos, responsivos y que se ven bien en cualquier dispositivo — para presentar tu negocio, lanzar un producto o captar clientes.",
-        en: "Fast, responsive sites that look good on any device — to present your business, launch a product, or bring in customers.",
+        es: "Landing pages para lanzar un producto o una marca: scroll narrativo, video y 3D en tiempo real, rápidas y accesibles. Como CEIBA y VOLT.",
+        en: "Landing pages that launch a product or a brand: scroll-driven storytelling, video and real-time 3D, fast and accessible. Like CEIBA and VOLT.",
       } satisfies Bilingual,
     },
     {
@@ -101,8 +101,8 @@ export const career = {
       role: "Senior Frontend Engineer",
       company: "Ginko Financial Solutions",
       desc: {
-        es: "Lidero el rediseño de banca 360 y la iniciativa de SSO para una plataforma multi-tenant que sirve a cuatro entidades desde un único código base. +95% de cumplimiento de entregas por sprint.",
-        en: "Leading the bank 360 redesign and the SSO initiative for a multi-tenant platform serving four institutions from a single codebase. 95%+ sprint delivery compliance.",
+        es: "Lidero el rediseño de la banca en línea y la implementación de Single Sign-On en una plataforma multi-tenant: cuatro entidades, un solo código base, cada una con su propia identidad.",
+        en: "Leading the online banking redesign and the Single Sign-On rollout on a multi-tenant platform: four institutions, one codebase, each with its own brand.",
       } satisfies Bilingual,
     },
     {
@@ -209,6 +209,7 @@ export const projects = {
       stack: ["Astro", "3D", "Three.js", "WebGL", "Scrollytelling"],
       demoHref: "https://jesusgabri3l.github.io/volt/",
       repos: [{ label: "volt", href: "https://github.com/jesusgabri3l/volt" }],
+      codeLabel: { es: "Cómo está hecho", en: "How it's built" } satisfies Bilingual,
     },
     {
       title: "Chat App",
@@ -261,7 +262,7 @@ export const contact = {
     },
   ],
   location: "Barranquilla, Colombia",
-  availability: { es: "disponible remoto", en: "available remote" } satisfies Bilingual,
+  availability: { es: "disponible para proyectos freelance · remoto", en: "open to freelance projects · remote" } satisfies Bilingual,
   cvHref: {
     es: "/cv/jesus-gabriel-ahumada-cv-es.pdf",
     en: "/cv/jesus-gabriel-ahumada-cv-en.pdf",

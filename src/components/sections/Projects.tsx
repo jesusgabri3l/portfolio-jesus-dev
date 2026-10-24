@@ -56,7 +56,7 @@ export function Projects() {
                     rel="noreferrer"
                     className="underline decoration-cream/40 underline-offset-2 hover:decoration-cream"
                   >
-                    {t(projects.codeLabel)}
+                    {t(p.codeLabel ?? projects.codeLabel)}
                     {p.repos.length > 1 ? ` (${r.label})` : ""} ↗
                   </a>
                 ))}
