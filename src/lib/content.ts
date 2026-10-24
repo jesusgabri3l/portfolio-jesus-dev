@@ -98,7 +98,7 @@ export const career = {
       current: true,
       dateStart: "2024",
       dateEnd: { es: "HOY", en: "NOW" } satisfies Bilingual,
-      role: "Sr. Frontend Developer",
+      role: "Senior Frontend Engineer",
       company: "Ginko Financial Solutions",
       desc: {
         es: "Lidero el rediseño de banca 360 y la iniciativa de SSO para una plataforma multi-tenant que sirve a cuatro entidades desde un único código base. +95% de cumplimiento de entregas por sprint.",
