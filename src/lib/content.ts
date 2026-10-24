@@ -13,8 +13,8 @@ export const nav: Bilingual[] = [
 export const hero = {
   name: ["JESUS GABRIEL", "AHUMADA"],
   role: {
-    es: "Software Engineer | Fullstack Javascript Developer",
-    en: "Software Engineer | Fullstack Javascript Developer",
+    es: "Senior Frontend Engineer | Fullstack JavaScript",
+    en: "Senior Frontend Engineer | Fullstack JavaScript",
   } satisfies Bilingual,
   tagline: {
     es: "6+ años entregando productos web",
@@ -25,7 +25,7 @@ export const hero = {
 export const about = {
   eyebrowNum: "01",
   eyebrow: { es: "Sobre mí", en: "About" } satisfies Bilingual,
-  title: "SOFTWARE ENGINEER",
+  title: "SENIOR FRONTEND ENGINEER",
   paragraph: {
     es: "Construyo aplicaciones web que funcionan en condiciones reales: rápidas, estables y fáciles de mantener. Trabajo el producto completo, desde la interfaz que ve el usuario hasta lo que se ejecuta detrás. Si tu producto está creciendo más rápido que su código, ese es el tipo de trabajo que me interesa.",
     en: "I build web products that hold up under real use: fast, stable, and easy to change. That means taking them end to end, from what the user touches to what runs behind it. If your product is growing faster than its codebase, that's the kind of work I like.",
@@ -101,8 +101,8 @@ export const career = {
       role: "Sr. Frontend Developer",
       company: "Ginko Financial Solutions",
       desc: {
-        es: "Lidero el rediseño BOCC 360 y la iniciativa de SSO para Banco de Occidente, sobre una plataforma que sirve a cuatro entidades desde un único código base. +95% de cumplimiento de entregas por sprint.",
-        en: "Leading the BOCC 360 redesign and the SSO initiative for Banco de Occidente, on a platform serving four institutions from a single codebase. 95%+ sprint delivery compliance.",
+        es: "Lidero el rediseño de banca 360 y la iniciativa de SSO para una plataforma multi-tenant que sirve a cuatro entidades desde un único código base. +95% de cumplimiento de entregas por sprint.",
+        en: "Leading the bank 360 redesign and the SSO initiative for a multi-tenant platform serving four institutions from a single codebase. 95%+ sprint delivery compliance.",
       } satisfies Bilingual,
     },
     {
@@ -201,6 +201,16 @@ export const projects = {
       repos: [{ label: "ceiba", href: "https://github.com/jesusgabri3l/ceiba" }],
     },
     {
+      title: "VOLT",
+      desc: {
+        es: "Landing 3D interactiva para un teclado mecánico conceptual. Haz scroll para desarmarlo pieza por pieza, arrastra para rotarlo, escribe para presionar sus teclas y personaliza la carcasa, los keycaps y la retroiluminación en vivo.",
+        en: "Interactive 3D landing page for a concept mechanical keyboard. Scroll to take it apart piece by piece, drag to rotate, type to press its keys, and customize case, keycaps and backlight live.",
+      } satisfies Bilingual,
+      stack: ["Astro", "3D", "Three.js", "WebGL", "Scrollytelling"],
+      demoHref: "https://jesusgabri3l.github.io/volt/",
+      repos: [{ label: "volt", href: "https://github.com/jesusgabri3l/volt" }],
+    },
+    {
       title: "Chat App",
       desc: {
         es: "Chat en tiempo real: frontend en React + Vite con Google Sign-In, backend en Express + Socket.IO sobre Firestore.",
@@ -222,36 +232,6 @@ export const projects = {
       stack: ["React", "TypeScript", "MobX", "OAuth PKCE"],
       demoHref: "https://spotify-clon-jade.vercel.app/",
       repos: [{ label: "spotify-clon", href: "https://github.com/jesusgabri3l/spotify-clon" }],
-    },
-    {
-      title: "Sandbox",
-      desc: {
-        es: "Editor de código en vivo tipo CodePen con HTML, CSS y JS sobre Monaco Editor — comparte todo el sandbox por URL, sin backend.",
-        en: "Live code editor like CodePen/JSFiddle with HTML, CSS and JS, powered by Monaco Editor — share the whole sandbox via URL, no backend.",
-      } satisfies Bilingual,
-      stack: ["React", "TypeScript", "Monaco Editor"],
-      demoHref: "https://jesusgabri3l.github.io/sandbox/",
-      repos: [{ label: "sandbox", href: "https://github.com/jesusgabri3l/sandbox" }],
-    },
-    {
-      title: "Memory Game",
-      desc: {
-        es: "Juego de memoria con temática Game of Thrones — elige tu casa y compite contra el reloj en niveles cada vez más difíciles.",
-        en: "Game of Thrones themed memory-matching game — pick your house and race the clock across increasingly harder levels.",
-      } satisfies Bilingual,
-      stack: ["React", "TypeScript"],
-      demoHref: "https://jesusgabri3l.github.io/memory-game/",
-      repos: [{ label: "memory-game", href: "https://github.com/jesusgabri3l/memory-game" }],
-    },
-    {
-      title: "IP Geolocator",
-      desc: {
-        es: "Rastreador de IPs con React, TypeScript y Leaflet — ubicación, zona horaria e ISP de cualquier IPv4 sobre un mapa interactivo.",
-        en: "IP address tracker built with React, TypeScript and Leaflet — location, timezone and ISP for any IPv4 on an interactive map.",
-      } satisfies Bilingual,
-      stack: ["React", "TypeScript", "Leaflet"],
-      demoHref: "https://jesusgabri3l.github.io/ip-geolocator/",
-      repos: [{ label: "ip-geolocator", href: "https://github.com/jesusgabri3l/ip-geolocator" }],
     },
   ],
 };

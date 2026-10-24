@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Jesús Gabriel Ahumada — Fullstack JavaScript Software Engineer";
+export const alt = "Jesús Gabriel Ahumada — Senior Frontend Engineer | Fullstack JavaScript";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -20,7 +20,7 @@ export default function Image() {
         }}
       >
         <div style={{ fontSize: 22, letterSpacing: 4, opacity: 0.6, marginBottom: 24 }}>
-          SOFTWARE ENGINEER
+          SENIOR FRONTEND ENGINEER
         </div>
         <div style={{ fontSize: 88, fontWeight: 900, lineHeight: 0.95, display: "flex", flexDirection: "column" }}>
           <span>JESÚS GABRIEL</span>

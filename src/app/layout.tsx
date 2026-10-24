@@ -23,9 +23,9 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
-const TITLE = "Jesús Gabriel Ahumada — Fullstack JavaScript Software Engineer";
+const TITLE = "Jesús Gabriel Ahumada — Senior Frontend Engineer | Fullstack JavaScript";
 const DESCRIPTION =
-  "Software Engineer with 6+ years in the JavaScript/TypeScript ecosystem — Vue 3, React, Node.js and AWS, building products for banking, e-commerce and internal tools used worldwide.";
+  "Senior Frontend Engineer with 6+ years in the JavaScript/TypeScript ecosystem — Vue 3, React, Node.js and AWS, building products for banking, e-commerce and internal tools used worldwide.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   keywords: [
     "Jesús Gabriel Ahumada",
-    "Software Engineer",
-    "Fullstack Developer",
+    "Senior Frontend Engineer",
+    "Fullstack JavaScript",
     "JavaScript",
     "TypeScript",
     "React",

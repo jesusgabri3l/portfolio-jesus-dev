@@ -16,7 +16,7 @@ export function Projects() {
         <h2 className="mb-3 font-display text-[clamp(22px,3vh,44px)] leading-[0.95] tracking-[-0.02em]">
           {t(projects.title)}
         </h2>
-        <div className="grid grid-cols-1 gap-px bg-cream/22 sm:grid-cols-2 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-px bg-cream/22 sm:grid-cols-2">
           {projects.items.map((p, i) => (
             <article
               key={p.title}
