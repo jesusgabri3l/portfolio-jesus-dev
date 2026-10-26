@@ -264,8 +264,8 @@ export const contact = {
   location: "Barranquilla, Colombia",
   availability: { es: "disponible para proyectos freelance · remoto", en: "open to freelance projects · remote" } satisfies Bilingual,
   cvHref: {
-    es: "/cv/jesus-gabriel-ahumada-cv-es.pdf",
-    en: "/cv/jesus-gabriel-ahumada-cv-en.pdf",
+    es: "/cv/Espanol Resume  - Jesús Gabriel Ahumada Sarmiento.pdf",
+    en: "/cv/Resume  - Jesus Gabriel Ahumada Sarmiento.pdf",
   } satisfies Bilingual,
   cvLabel: { es: "Descargar CV", en: "Download CV" } satisfies Bilingual,
 };
