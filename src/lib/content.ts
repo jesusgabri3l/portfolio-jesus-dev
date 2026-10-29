@@ -260,6 +260,18 @@ export const contact = {
       href: "https://github.com/jesusgabri3l",
       external: true,
     },
+    {
+      label: { es: "Instagram", en: "Instagram" } satisfies Bilingual,
+      value: "@jesusgabri3l.dev",
+      href: "https://www.instagram.com/jesusgabri3l.dev/",
+      external: true,
+    },
+    {
+      label: { es: "X", en: "X" } satisfies Bilingual,
+      value: "@jesusgabri3ll",
+      href: "https://x.com/jesusgabri3ll",
+      external: true,
+    },
   ],
   location: "Barranquilla, Colombia",
   availability: { es: "disponible para proyectos freelance · remoto", en: "open to freelance projects · remote" } satisfies Bilingual,
