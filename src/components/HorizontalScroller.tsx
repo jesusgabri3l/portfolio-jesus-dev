@@ -89,6 +89,17 @@ export function HorizontalScroller() {
     window.scrollTo({ top: containerTop + index * viewportWidth, behavior });
   };
 
+  const stageRef = useRef<HTMLDivElement>(null);
+
+  // Si el foco entra a una sección fuera de pantalla (Tab), la traemos a la vista y evitamos que el navegador desplace el contenedor.
+  const handleFocusCapture = (event: React.FocusEvent<HTMLDivElement>) => {
+    const section = (event.target as HTMLElement).closest("section");
+    const index = section ? SECTION_IDS.indexOf(section.id) : -1;
+    if (index === -1) return;
+    if (stageRef.current) stageRef.current.scrollLeft = 0;
+    if (isDesktop && index !== activeIndex) goTo(index, "auto");
+  };
+
   const prevModeRef = useRef(isDesktop);
   const prevWidthRef = useRef(viewportWidth);
 
@@ -109,21 +120,20 @@ export function HorizontalScroller() {
       <Header activeIndex={activeIndex} onNavClick={goTo} />
       {isDesktop && <ProgressBar progress={scrollYProgress} />}
 
+      <main id="main" tabIndex={-1} className="outline-none">
       <div
         ref={containerRef}
-        className={isDesktop ? "relative" : undefined}
-        style={isDesktop ? { height: travel + viewportHeight } : undefined}
+        className="md:relative"
+        style={isDesktop && viewportWidth > 0 ? { height: travel + viewportHeight } : undefined}
       >
         <div
-          className={
-            isDesktop
-              ? "sticky top-[var(--header-h)] h-[calc(100vh-var(--header-h))] overflow-hidden"
-              : undefined
-          }
+          ref={stageRef}
+          onFocusCapture={handleFocusCapture}
+          className="md:sticky md:top-[var(--header-h)] md:h-[calc(100vh-var(--header-h))] md:overflow-hidden"
         >
           <motion.div
-            className={isDesktop ? "flex h-full w-max items-stretch" : "flex flex-col"}
-            style={isDesktop ? { x } : undefined}
+            className="flex flex-col md:h-full md:w-max md:flex-row md:items-stretch"
+            style={isDesktop && viewportWidth > 0 ? { x } : undefined}
           >
             <Hero />
             <About />
@@ -135,6 +145,7 @@ export function HorizontalScroller() {
           </motion.div>
         </div>
       </div>
+      </main>
     </>
   );
 }
