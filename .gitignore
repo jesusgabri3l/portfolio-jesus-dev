@@ -41,5 +41,6 @@ yarn-error.log*
 next-env.d.ts
 
 # site-audit: temporales y última corrida (el historial sí se versiona)
-.seo/work/
-.seo/audit.json
+
+# SEO workflow (local only)
+.seo/
