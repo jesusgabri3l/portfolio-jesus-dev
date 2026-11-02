@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, ResolvingMetadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CookiePreferencesButton } from "@/components/consent/CookiePreferencesButton";
@@ -8,17 +8,18 @@ import { hasLocale, languageAlternates, pathFor } from "@/lib/site";
 
 type PrivacyParams = { params: Promise<{ lang: string }> };
 
-export async function generateMetadata({ params }: PrivacyParams): Promise<Metadata> {
+export async function generateMetadata({ params }: PrivacyParams, parent: ResolvingMetadata): Promise<Metadata> {
   const { lang } = await params;
   if (!hasLocale(lang)) return {};
+  const { openGraph, twitter } = await parent;
   const { privacyTitle, privacyDescription } = seoCopy[lang];
 
   return {
     title: privacyTitle,
     description: privacyDescription,
     alternates: { canonical: pathFor(lang, "/privacy"), languages: languageAlternates("/privacy") },
-    openGraph: { url: pathFor(lang, "/privacy"), title: privacyTitle, description: privacyDescription },
-    twitter: { title: privacyTitle, description: privacyDescription },
+    openGraph: { url: pathFor(lang, "/privacy"), title: privacyTitle, description: privacyDescription, images: openGraph?.images },
+    twitter: { title: privacyTitle, description: privacyDescription, images: twitter?.images },
   };
 }
 

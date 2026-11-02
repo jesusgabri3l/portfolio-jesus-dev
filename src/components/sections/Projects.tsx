@@ -22,7 +22,7 @@ export function Projects() {
               key={p.title}
               className="flex min-h-[clamp(150px,24vh,220px)] flex-col gap-1.5 bg-ink p-3"
             >
-              <div className="font-mono text-[10px] opacity-45">
+              <div className="font-mono text-[10px] opacity-70">
                 {String(i + 1).padStart(2, "0")}
               </div>
               <h3 className="font-display text-base leading-[1.05]">{p.title}</h3>
@@ -39,12 +39,12 @@ export function Projects() {
                   </span>
                 ))}
               </div>
-              <div className="flex flex-wrap gap-x-3 gap-y-1 font-mono text-[10.5px]">
+              <div className="flex flex-wrap gap-x-3 font-mono text-[10.5px]">
                 <a
                   href={p.demoHref}
                   target="_blank"
                   rel="noreferrer"
-                  className="underline decoration-cream/40 underline-offset-2 hover:decoration-cream"
+                  className="inline-flex min-h-6 items-center underline decoration-cream/40 underline-offset-2 hover:decoration-cream"
                 >
                   {t(projects.demoLabel)} ↗
                 </a>
@@ -54,7 +54,7 @@ export function Projects() {
                     href={r.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="underline decoration-cream/40 underline-offset-2 hover:decoration-cream"
+                    className="inline-flex min-h-6 items-center underline decoration-cream/40 underline-offset-2 hover:decoration-cream"
                   >
                     {t(p.codeLabel ?? projects.codeLabel)}
                     {p.repos.length > 1 ? ` (${r.label})` : ""} ↗
