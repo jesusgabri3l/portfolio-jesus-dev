@@ -1,0 +1,180 @@
+{
+  "schema": 1,
+  "date": "2026-11-02",
+  "mode": "local",
+  "url": "http://localhost:3100",
+  "baseline": false,
+  "scores": {
+    "perfMobile": 100,
+    "perfDesktop": 100,
+    "a11yLighthouse": 92,
+    "seoLighthouse": 100,
+    "bestPractices": 100,
+    "axeViolations": 0
+  },
+  "metrics": {
+    "mobile": {
+      "lcpMs": 1058,
+      "fcpMs": 1058,
+      "tbtMs": 84,
+      "cls": 0,
+      "speedIndexMs": 1058
+    },
+    "desktop": {
+      "lcpMs": 289,
+      "fcpMs": 289,
+      "tbtMs": 0,
+      "cls": 0,
+      "speedIndexMs": 322
+    },
+    "perfRuns": {
+      "mobile": [
+        99,
+        100,
+        100
+      ],
+      "desktop": [
+        100,
+        100,
+        100
+      ]
+    }
+  },
+  "crawl": {
+    "pages": 5,
+    "sitemapUrls": 4,
+    "robots": {
+      "searchBots": {
+        "OAI-SearchBot": "permitido",
+        "PerplexityBot": "permitido",
+        "Bingbot": "permitido",
+        "Googlebot": "permitido"
+      },
+      "trainingBots": {
+        "GPTBot": "permitido",
+        "Google-Extended": "permitido"
+      }
+    }
+  },
+  "a11y": [
+    {
+      "path": "/",
+      "axe": 0,
+      "tabStops": 15,
+      "noFocus": 0,
+      "reducedMotion": {
+        "infiniteAnimations": 0,
+        "screenChanged": false
+      }
+    },
+    {
+      "path": "/en",
+      "axe": 0,
+      "tabStops": 15,
+      "noFocus": 0
+    },
+    {
+      "path": "/es",
+      "axe": 0,
+      "tabStops": 15,
+      "noFocus": 0
+    },
+    {
+      "path": "/en/privacy",
+      "axe": 0,
+      "tabStops": 6,
+      "noFocus": 0
+    },
+    {
+      "path": "/es/privacy",
+      "axe": 0,
+      "tabStops": 6,
+      "noFocus": 0
+    }
+  ],
+  "consent": {
+    "status": "no_aplica",
+    "note": "Sin tracking de Google; no hay nada que consentir",
+    "configAnalytics": "ga4",
+    "trackerRequests": 0,
+    "cookies": 0,
+    "gaCookies": [],
+    "cookielessTools": [],
+    "bannerDetected": true
+  },
+  "gsc": {
+    "status": "no_aplica",
+    "note": "modo local"
+  },
+  "totals": {
+    "actions": 7,
+    "shown": 5
+  },
+  "actions": [
+    {
+      "id": "tab-order-jumps:*",
+      "area": "a11y",
+      "url": "/en/privacy",
+      "fileHint": "",
+      "issue": "El orden de Tab salta hacia atrás en la pantalla",
+      "fix": "Alinear el orden del DOM con el orden visual",
+      "impact": "med",
+      "effort": "S",
+      "evidence": "2 páginas (/en/privacy, /es/privacy). 1 saltos en 6 paradas",
+      "autoFixable": false,
+      "source": "playwright"
+    },
+    {
+      "id": "lh-color-contrast:/",
+      "area": "a11y",
+      "url": "/",
+      "fileHint": "",
+      "issue": "Background and foreground colors do not have a sufficient contrast ratio.",
+      "fix": "Low-contrast text is difficult or impossible for many users to read.",
+      "impact": "med",
+      "effort": "M",
+      "evidence": "",
+      "autoFixable": false,
+      "source": "lighthouse"
+    },
+    {
+      "id": "lh-target-size:/",
+      "area": "a11y",
+      "url": "/",
+      "fileHint": "",
+      "issue": "Touch targets do not have sufficient size or spacing.",
+      "fix": "Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets.",
+      "impact": "med",
+      "effort": "M",
+      "evidence": "",
+      "autoFixable": false,
+      "source": "lighthouse"
+    },
+    {
+      "id": "og-incomplete:*",
+      "area": "seo",
+      "url": "/en/privacy",
+      "fileHint": "src/app/layout.tsx",
+      "issue": "Open Graph incompleto (og:title/og:image)",
+      "fix": "Completar metadata openGraph",
+      "impact": "low",
+      "effort": "S",
+      "evidence": "2 páginas (/en/privacy, /es/privacy). {\"title\":true,\"image\":false}",
+      "autoFixable": true,
+      "source": "crawl"
+    },
+    {
+      "id": "not-in-sitemap:/",
+      "area": "seo",
+      "url": "/",
+      "fileHint": "src/app/sitemap.ts",
+      "issue": "Página rastreada que no está en el sitemap",
+      "fix": "Agregarla al sitemap",
+      "impact": "low",
+      "effort": "S",
+      "evidence": "",
+      "autoFixable": false,
+      "source": "crawl"
+    }
+  ]
+}

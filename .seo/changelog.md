@@ -36,3 +36,8 @@
 - **Tipo:** contenido, i18n, metadata
 - **Cambio:** español por defecto (`/` -> /es salvo navegador en inglés, x-default /es); hero con nombre corto ("Jesús Gabriel", sin tilde en inglés); nombre por idioma en metadata y schema (`alternateName`); description ES con "Barranquilla" (búsqueda local, ver `serp-notes.md`); sin "6+ años" en el tagline; se quitan las ilustraciones de Contacto y Educación.
 - **Búsquedas objetivo:** desarrollador web freelance Barranquilla / Colombia
+
+## 2026-11-02 · fase 2 · medición del después (site-audit local)
+- **Resultado:** perf móvil 95 → 100 (LCP 2.7 s → 1.1 s, TBT 126 → 84 ms), axe 4 → 0, acciones 10 → 5. Informe: `reports/2026-11-02-fase2.md`.
+- **Ajustes durante la medición:** GA4 pasa a Consent Mode básico (gtag.js no se descarga hasta aceptar; antes salían pings sin cookies), enlace de idioma subrayado (link-in-text-block).
+- **Pendiente (fase 3):** orden de Tab en /privacy, contraste y tamaño de targets (Lighthouse), og:image en /privacy, "/" fuera del sitemap (falso positivo: es redirección).
