@@ -11,14 +11,14 @@ export const nav: Bilingual[] = [
 ];
 
 export const hero = {
-  name: ["JESUS GABRIEL", "AHUMADA"],
+  name: { es: ["JESÚS", "GABRIEL"], en: ["JESUS", "GABRIEL"] },
   role: {
     es: "Senior Frontend Engineer | Fullstack JavaScript",
     en: "Senior Frontend Engineer | Fullstack JavaScript",
   } satisfies Bilingual,
   tagline: {
-    es: "6+ años entregando productos web",
-    en: "6+ years shipping web products",
+    es: "Desarrollador web freelance",
+    en: "Freelance web developer",
   } satisfies Bilingual,
 };
 

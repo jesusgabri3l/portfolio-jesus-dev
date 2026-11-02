@@ -1,26 +1,22 @@
-import Image from "next/image";
 import { contact } from "@/lib/content";
 import { useLang } from "@/lib/lang-context";
 import { Button } from "@/components/Button";
+import { CookiePreferencesButton } from "@/components/consent/CookiePreferencesButton";
+import Link from "next/link";
+import { uiCopy } from "@/lib/seo-copy";
+import { pathFor } from "@/lib/site";
 
 export function Contact() {
-  const { t } = useLang();
+  const { lang, t } = useLang();
 
   return (
     <section
       id="contact"
-      className="relative flex min-h-screen w-full flex-none items-center overflow-hidden bg-cream px-[clamp(24px,6vw,90px)] py-[90px] pb-[280px] text-ink md:h-full md:w-screen md:pb-[90px]"
+      className="relative flex min-h-screen w-full flex-none items-center overflow-hidden bg-cream px-[clamp(24px,6vw,90px)] py-[90px] text-ink md:h-full md:w-screen"
     >
-      <Image
-        src="/images/pose-contact.png"
-        alt=""
-        width={227}
-        height={467}
-        className="absolute bottom-0 left-6 block w-[clamp(80px,8vw,120px)] h-auto opacity-90 md:h-[clamp(120px,26vh,247px)] md:w-auto"
-      />
       <div className="relative flex w-full items-center gap-[clamp(24px,5vw,70px)]">
         <div className="min-w-0 flex-1">
-          <div className="mb-3.5 font-mono text-[clamp(10px,1.2vw,12px)] uppercase tracking-[0.18em] opacity-55">
+          <div className="mb-3.5 font-mono text-[clamp(10px,1.2vw,12px)] uppercase tracking-[0.18em] opacity-70">
             {contact.eyebrowNum} — {t(contact.eyebrow)}
           </div>
           <h2 className="mb-6.5 font-display text-[clamp(40px,7vw,96px)] leading-[0.85] tracking-[-0.03em]">
@@ -38,7 +34,7 @@ export function Contact() {
                 rel={link.external ? "noreferrer" : undefined}
                 className="flex items-baseline justify-between border-b border-ink/25 pb-2.5"
               >
-                <span className="font-mono text-[10px] uppercase tracking-[0.14em] opacity-55">
+                <span className="font-mono text-[10px] uppercase tracking-[0.14em] opacity-70">
                   {t(link.label)}
                 </span>
                 <span className="font-display text-base">{link.value}</span>
@@ -48,6 +44,12 @@ export function Contact() {
           <Button href={t(contact.cvHref)} download sectionBg="light" variant="secondary" className="mt-6">
             {t(contact.cvLabel)}
           </Button>
+          <footer className="mt-6 flex flex-wrap gap-x-5 gap-y-2 font-mono text-[11px] uppercase tracking-[0.1em]">
+            <Link href={pathFor(lang, "/privacy")} className="underline underline-offset-2">
+              {uiCopy[lang].privacy}
+            </Link>
+            <CookiePreferencesButton />
+          </footer>
         </div>
       </div>
     </section>

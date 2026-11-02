@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { education } from "@/lib/content";
 import { useLang } from "@/lib/lang-context";
 import { stackIcons } from "@/components/stack-icons";
@@ -9,18 +8,11 @@ export function Education() {
   return (
     <section
       id="education"
-      className="relative flex min-h-screen w-full flex-none items-center overflow-hidden bg-cream px-[clamp(24px,6vw,90px)] py-[90px] pb-[280px] text-ink md:h-full md:w-screen md:pb-[90px]"
+      className="relative flex min-h-screen w-full flex-none items-center overflow-hidden bg-cream px-[clamp(24px,6vw,90px)] py-[90px] text-ink md:h-full md:w-screen"
     >
-      <Image
-        src="/images/pose-education.png"
-        alt=""
-        width={198}
-        height={463}
-        className="absolute bottom-0 left-6 block w-[clamp(80px,8vw,120px)] h-auto opacity-90 md:h-[clamp(120px,26vh,280px)] md:w-auto"
-      />
       <div className="flex w-full items-center gap-[clamp(24px,4vw,60px)]">
         <div className="min-w-0 flex-1">
-          <div className="mb-2.5 font-mono text-[clamp(10px,1.2vw,12px)] uppercase tracking-[0.18em] opacity-60">
+          <div className="mb-2.5 font-mono text-[clamp(10px,1.2vw,12px)] uppercase tracking-[0.18em] opacity-70">
             {education.eyebrowNum} — {t(education.eyebrow)}
           </div>
           <h2 className="mb-5 font-display text-[clamp(24px,3.4vw,44px)] leading-[0.95] tracking-[-0.02em]">
@@ -28,7 +20,7 @@ export function Education() {
           </h2>
           <div className="grid grid-cols-1 gap-[clamp(18px,3vw,40px)] sm:grid-cols-2">
             <div>
-              <div className="mb-3 font-mono text-[10px] uppercase tracking-[0.16em] opacity-55">
+              <div className="mb-3 font-mono text-[10px] uppercase tracking-[0.16em] opacity-70">
                 {t(education.degreesLabel)}
               </div>
               {education.degrees.map((d) => (
@@ -39,7 +31,7 @@ export function Education() {
               ))}
             </div>
             <div>
-              <div className="mb-3 font-mono text-[10px] uppercase tracking-[0.16em] opacity-55">
+              <div className="mb-3 font-mono text-[10px] uppercase tracking-[0.16em] opacity-70">
                 {t(education.certificationsLabel)}
               </div>
               <div className="grid gap-2">
