@@ -41,3 +41,10 @@
 - **Resultado:** perf móvil 95 → 100 (LCP 2.7 s → 1.1 s, TBT 126 → 84 ms), axe 4 → 0, acciones 10 → 5. Informe: `reports/2026-11-02-fase2.md`.
 - **Ajustes durante la medición:** GA4 pasa a Consent Mode básico (gtag.js no se descarga hasta aceptar; antes salían pings sin cookies), enlace de idioma subrayado (link-in-text-block).
 - **Pendiente (fase 3):** orden de Tab en /privacy, contraste y tamaño de targets (Lighthouse), og:image en /privacy, "/" fuera del sitemap (falso positivo: es redirección).
+
+## 2026-11-02 · fase 3 · acciones del audit (`build-seo --from`)
+- **Páginas:** /{en,es}/privacy, /
+- **Tipo:** metadata, a11y
+- **Cambio:** og:image y twitter:image heredados del layout en privacy (`generateMetadata` con `parent`); contraste del número de proyecto (opacity 45 -> 70); enlaces de proyectos con alto mínimo de 24 px (target size). Orden de Tab en privacy y "/" en sitemap eran falsos positivos de la herramienta (banner fixed, redirección); se corrigió site-audit.
+- **Acciones resueltas:** og-incomplete:*, tab-order-jumps:*, lh-color-contrast:/, lh-target-size:/, not-in-sitemap:/
+- **Resultado (reports/2026-11-02-4.md):** a11y Lighthouse 92 -> 100, acciones 5 -> 0, perf 100/100, axe 0.
