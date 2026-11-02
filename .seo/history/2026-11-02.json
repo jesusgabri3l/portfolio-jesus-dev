@@ -1,0 +1,249 @@
+{
+  "schema": 1,
+  "date": "2026-11-02",
+  "mode": "local",
+  "url": "http://localhost:3000",
+  "baseline": true,
+  "scores": {
+    "perfMobile": 95,
+    "perfDesktop": 100,
+    "a11yLighthouse": 94,
+    "seoLighthouse": 100,
+    "bestPractices": 96,
+    "axeViolations": 4
+  },
+  "metrics": {
+    "mobile": {
+      "lcpMs": 2744,
+      "fcpMs": 760,
+      "tbtMs": 126,
+      "cls": 0,
+      "speedIndexMs": 1177
+    },
+    "desktop": {
+      "lcpMs": 204,
+      "fcpMs": 204,
+      "tbtMs": 0,
+      "cls": 0,
+      "speedIndexMs": 266
+    },
+    "perfRuns": {
+      "mobile": [
+        93,
+        100,
+        95
+      ],
+      "desktop": [
+        100,
+        100,
+        100
+      ]
+    }
+  },
+  "crawl": {
+    "pages": 1,
+    "sitemapUrls": 1,
+    "robots": {
+      "searchBots": {
+        "OAI-SearchBot": "permitido",
+        "PerplexityBot": "permitido",
+        "Bingbot": "permitido",
+        "Googlebot": "permitido"
+      },
+      "trainingBots": {
+        "GPTBot": "permitido",
+        "Google-Extended": "permitido"
+      }
+    }
+  },
+  "a11y": [
+    {
+      "path": "/",
+      "axe": 4,
+      "tabStops": 14,
+      "noFocus": 0,
+      "reducedMotion": {
+        "infiniteAnimations": 0,
+        "screenChanged": false
+      }
+    }
+  ],
+  "consent": {
+    "status": "no_aplica",
+    "note": "Sin tracking de Google; no hay nada que consentir",
+    "configAnalytics": "ga4",
+    "trackerRequests": 0,
+    "cookies": 0,
+    "gaCookies": [],
+    "cookielessTools": [
+      "localhost:3000"
+    ],
+    "bannerDetected": false
+  },
+  "gsc": {
+    "status": "no_aplica",
+    "note": "modo local"
+  },
+  "totals": {
+    "actions": 12,
+    "shown": 12
+  },
+  "actions": [
+    {
+      "id": "axe-color-contrast:/",
+      "area": "a11y",
+      "url": "/",
+      "fileHint": "",
+      "issue": "Elements must meet minimum color contrast ratio thresholds",
+      "fix": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "impact": "high",
+      "effort": "S",
+      "evidence": "6 elementos: .px-0\\.5.py-1.border-b-2:nth-child(2) | .px-0\\.5.py-1.border-b-2:nth-child(3)",
+      "autoFixable": false,
+      "source": "axe"
+    },
+    {
+      "id": "axe-label-content-name-mismatch:/",
+      "area": "a11y",
+      "url": "/",
+      "fileHint": "",
+      "issue": "Elements must have their visible text as part of their accessible name",
+      "fix": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+      "impact": "high",
+      "effort": "S",
+      "evidence": "1 elementos: button[aria-label=\"Go to home\"]",
+      "autoFixable": false,
+      "source": "axe"
+    },
+    {
+      "id": "lh-largest-contentful-paint:/",
+      "area": "perf",
+      "url": "/",
+      "fileHint": "",
+      "issue": "Largest Contentful Paint",
+      "fix": "Largest Contentful Paint marks the time at which the largest text or image is painted.",
+      "impact": "high",
+      "effort": "M",
+      "evidence": "2.7 s",
+      "autoFixable": false,
+      "source": "lighthouse"
+    },
+    {
+      "id": "jsonld-missing:/",
+      "area": "seo",
+      "url": "/",
+      "fileHint": "src/app/page.tsx",
+      "issue": "Sin datos estructurados JSON-LD en el home",
+      "fix": "Agregar Person + WebSite (+ ProfessionalService)",
+      "impact": "med",
+      "effort": "S",
+      "evidence": "",
+      "autoFixable": true,
+      "source": "crawl"
+    },
+    {
+      "id": "axe-landmark-one-main:/",
+      "area": "a11y",
+      "url": "/",
+      "fileHint": "",
+      "issue": "Document should have one main landmark",
+      "fix": "Ensure the document has a main landmark",
+      "impact": "med",
+      "effort": "S",
+      "evidence": "1 elementos: html",
+      "autoFixable": false,
+      "source": "axe"
+    },
+    {
+      "id": "axe-region:/",
+      "area": "a11y",
+      "url": "/",
+      "fileHint": "",
+      "issue": "All page content should be contained by landmarks",
+      "fix": "Ensure all page content is contained by landmarks",
+      "impact": "med",
+      "effort": "S",
+      "evidence": "24 elementos: #hero | .opacity-60.mb-3.text-\\[clamp\\(10px\\,1\\.2vw\\,12px\\)\\]",
+      "autoFixable": false,
+      "source": "axe"
+    },
+    {
+      "id": "tab-order-jumps:/",
+      "area": "a11y",
+      "url": "/",
+      "fileHint": "",
+      "issue": "El orden de Tab salta hacia atrás en la pantalla",
+      "fix": "Alinear el orden del DOM con el orden visual",
+      "impact": "med",
+      "effort": "S",
+      "evidence": "1 saltos en 14 paradas",
+      "autoFixable": false,
+      "source": "playwright"
+    },
+    {
+      "id": "lh-color-contrast:/",
+      "area": "a11y",
+      "url": "/",
+      "fileHint": "",
+      "issue": "Background and foreground colors do not have a sufficient contrast ratio.",
+      "fix": "Low-contrast text is difficult or impossible for many users to read.",
+      "impact": "med",
+      "effort": "M",
+      "evidence": "",
+      "autoFixable": false,
+      "source": "lighthouse"
+    },
+    {
+      "id": "title-length:/",
+      "area": "seo",
+      "url": "/",
+      "fileHint": "src/app/layout.tsx",
+      "issue": "Title fuera de 15-65 caracteres",
+      "fix": "Ajustar el largo del title",
+      "impact": "low",
+      "effort": "S",
+      "evidence": "71 caracteres: Jesús Gabriel Ahumada — Senior Frontend Engineer | Fullstack JavaScript",
+      "autoFixable": false,
+      "source": "crawl"
+    },
+    {
+      "id": "description-length:/",
+      "area": "seo",
+      "url": "/",
+      "fileHint": "src/app/layout.tsx",
+      "issue": "Meta description fuera de 70-160 caracteres",
+      "fix": "Ajustar el largo",
+      "impact": "low",
+      "effort": "S",
+      "evidence": "187 caracteres",
+      "autoFixable": false,
+      "source": "crawl"
+    },
+    {
+      "id": "lh-landmark-one-main:/",
+      "area": "a11y",
+      "url": "/",
+      "fileHint": "",
+      "issue": "Document does not have a main landmark.",
+      "fix": "One main landmark helps screen reader users navigate a web page.",
+      "impact": "low",
+      "effort": "M",
+      "evidence": "",
+      "autoFixable": false,
+      "source": "lighthouse"
+    },
+    {
+      "id": "lh-errors-in-console:/",
+      "area": "perf",
+      "url": "/",
+      "fileHint": "",
+      "issue": "Browser errors were logged to the console",
+      "fix": "Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns.",
+      "impact": "low",
+      "effort": "M",
+      "evidence": "",
+      "autoFixable": false,
+      "source": "lighthouse"
+    }
+  ]
+}
