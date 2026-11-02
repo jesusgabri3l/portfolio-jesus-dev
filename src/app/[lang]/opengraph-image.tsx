@@ -1,10 +1,19 @@
 import { ImageResponse } from "next/og";
+import { hasLocale, defaultLang } from "@/lib/site";
 
-export const alt = "Jesús Gabriel Ahumada — Senior Frontend Engineer | Fullstack JavaScript";
+export const alt = "Jesús Gabriel Ahumada — Senior Frontend Engineer";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default function Image() {
+const kicker = {
+  en: "FREELANCE FRONTEND DEVELOPER",
+  es: "DESARROLLADOR WEB FREELANCE",
+};
+
+export default async function Image({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang: rawLang } = await params;
+  const lang = hasLocale(rawLang) ? rawLang : defaultLang;
+
   return new ImageResponse(
     (
       <div
@@ -19,15 +28,13 @@ export default function Image() {
           padding: 80,
         }}
       >
-        <div style={{ fontSize: 22, letterSpacing: 4, opacity: 0.6, marginBottom: 24 }}>
-          SENIOR FRONTEND ENGINEER
-        </div>
+        <div style={{ fontSize: 22, letterSpacing: 4, opacity: 0.6, marginBottom: 24 }}>{kicker[lang]}</div>
         <div style={{ fontSize: 88, fontWeight: 900, lineHeight: 0.95, display: "flex", flexDirection: "column" }}>
           <span>JESÚS GABRIEL</span>
           <span>AHUMADA</span>
         </div>
         <div style={{ fontSize: 26, marginTop: 32, opacity: 0.75 }}>
-          Fullstack JavaScript · Vue 3 · React · Node.js · AWS
+          Senior Frontend Engineer · Vue 3 · React · Node.js · AWS
         </div>
       </div>
     ),

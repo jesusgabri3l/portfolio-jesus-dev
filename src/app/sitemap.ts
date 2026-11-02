@@ -1,14 +1,19 @@
 import type { MetadataRoute } from "next";
+import { CONTENT_UPDATED_AT, SITE_URL, absoluteUrl, languageAlternates, locales } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = "https://jesusgabriel.dev";
+  const paths = ["", "/privacy"];
 
-  return [
-    {
-      url: siteUrl,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 1,
-    },
-  ];
+  return paths.flatMap((path) => {
+    const alternates = {
+      languages: Object.fromEntries(
+        Object.entries(languageAlternates(path)).map(([lang, href]) => [lang, absoluteUrl(href)]),
+      ),
+    };
+    return locales.map((lang) => ({
+      url: `${SITE_URL}/${lang}${path}`,
+      lastModified: CONTENT_UPDATED_AT,
+      alternates,
+    }));
+  });
 }
