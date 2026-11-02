@@ -13,5 +13,6 @@
     "EU"
   ],
   "notes": "Quitar @vercel/analytics al instalar GA4 + banner (fase 2).",
-  "gitPolicy": "commit"
+  "gitPolicy": "commit",
+  "aiSources": "chatgpt\\.com|perplexity\\.ai|copilot\\.microsoft\\.com|gemini\\.google\\.com|claude\\.ai"
 }
