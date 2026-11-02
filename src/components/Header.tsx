@@ -67,11 +67,11 @@ export function Header({
             <>
               <span aria-current="true">ES</span>
               {" / "}
-              <Link href={pathFor(targetLang)} lang="en" hrefLang="en" className="opacity-70">EN</Link>
+              <Link href={pathFor(targetLang)} lang="en" hrefLang="en" className="underline! underline-offset-2 opacity-70">EN</Link>
             </>
           ) : (
             <>
-              <Link href={pathFor(targetLang)} lang="es" hrefLang="es" className="opacity-70">ES</Link>
+              <Link href={pathFor(targetLang)} lang="es" hrefLang="es" className="underline! underline-offset-2 opacity-70">ES</Link>
               {" / "}
               <span aria-current="true">EN</span>
             </>
