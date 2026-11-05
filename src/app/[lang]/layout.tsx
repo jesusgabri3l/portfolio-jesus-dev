@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import { Archivo_Black, Manrope, JetBrains_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { WebVitalsReporter } from "@/components/analytics/WebVitalsReporter";
 import { CookieBanner } from "@/components/consent/CookieBanner";
@@ -94,6 +96,8 @@ export default async function RootLayout({
         </LangProvider>
         <GoogleAnalytics />
         <WebVitalsReporter />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

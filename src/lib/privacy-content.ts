@@ -18,6 +18,7 @@ export const privacyContent: Record<Lang, { title: string; updated: string; back
         heading: "What data I collect and why",
         paragraphs: [
           "Only if you accept analytics cookies, Google Analytics 4 collects: pages visited, approximate location, device and browser, how you arrived at the site, and loading-speed metrics (Core Web Vitals). The purpose is to understand how the site is used and improve it. Your IP address is not stored in Google Analytics 4.",
+          "Separately, Vercel Web Analytics counts visits without cookies or personal identifiers: page, referrer, country, device and browser, in aggregate only. Vercel Speed Insights measures loading speed (Core Web Vitals) the same way, without cookies.",
           "If you email me, I use your message and email address only to reply to you.",
         ],
       },
@@ -66,6 +67,7 @@ export const privacyContent: Record<Lang, { title: string; updated: string; back
         heading: "Qué datos recolecto y para qué",
         paragraphs: [
           "Solo si aceptas las cookies de analítica, Google Analytics 4 recoge: páginas visitadas, ubicación aproximada, dispositivo y navegador, cómo llegaste al sitio y métricas de velocidad de carga (Core Web Vitals). La finalidad es entender cómo se usa el sitio y mejorarlo. Google Analytics 4 no almacena tu dirección IP.",
+          "Aparte, Vercel Web Analytics cuenta visitas sin cookies ni identificadores personales: página, sitio de origen, país, dispositivo y navegador, solo de forma agregada. Vercel Speed Insights mide la velocidad de carga (Core Web Vitals) de la misma forma, sin cookies.",
           "Si me escribes por correo, uso tu mensaje y tu correo únicamente para responderte.",
         ],
       },
