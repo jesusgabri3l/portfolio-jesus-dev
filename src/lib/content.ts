@@ -268,8 +268,8 @@ export const contact = {
     },
     {
       label: { es: "X", en: "X" } satisfies Bilingual,
-      value: "@jesusgabri3ll",
-      href: "https://x.com/jesusgabri3ll",
+      value: "@jesusgabri3ldev",
+      href: "https://x.com/jesusgabri3ldev",
       external: true,
     },
   ],
