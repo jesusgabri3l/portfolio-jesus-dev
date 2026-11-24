@@ -61,8 +61,8 @@ export const services = {
       num: "02",
       title: { es: "Experiencias web interactivas", en: "Interactive web experiences" } satisfies Bilingual,
       desc: {
-        es: "Landing pages para lanzar un producto o una marca: scroll narrativo, video y 3D en tiempo real, rápidas y accesibles. Como CEIBA y VOLT.",
-        en: "Landing pages that launch a product or a brand: scroll-driven storytelling, video and real-time 3D, fast and accessible. Like CEIBA and VOLT.",
+        es: "Landing pages para lanzar un producto o una marca: scroll narrativo, video y 3D en tiempo real, rápidas y accesibles. Como Civitas y ZAFRA.",
+        en: "Landing pages that launch a product or a brand: scroll-driven storytelling, video and real-time 3D, fast and accessible. Like Civitas and ZAFRA.",
       } satisfies Bilingual,
     },
     {
@@ -191,6 +191,16 @@ export const projects = {
   codeLabel: { es: "Código", en: "Code" } satisfies Bilingual,
   items: [
     {
+      title: "Civitas",
+      desc: {
+        es: "Atlas interactivo de monumentos: giras un globo 3D, eliges un monumento y haces scroll por su historia mientras su maqueta se arma, se cae y cambia de forma frente a ti.",
+        en: "Interactive atlas of monuments: spin a 3D globe, pick a landmark and scroll through its history while its scale model assembles, falls apart and changes shape in front of you.",
+      } satisfies Bilingual,
+      stack: ["Astro", "Vue", "Three.js", "GSAP", "WebGL"],
+      demoHref: "https://visitcivitas.com",
+      repos: [{ label: "civitas", href: "https://github.com/jesusgabri3l/civitas" }],
+    },
+    {
       title: "CEIBA",
       desc: {
         es: "Landing de café de especialidad contada como un recorrido de cámara: el scroll controla el video, del cafetal a la bolsa. Video por dispositivo (AV1/H.264), carga diferida y analítica de abandono por escena.",
@@ -201,38 +211,24 @@ export const projects = {
       repos: [{ label: "ceiba", href: "https://github.com/jesusgabri3l/ceiba" }],
     },
     {
-      title: "VOLT",
+      title: "ZAFRA",
       desc: {
-        es: "Landing 3D interactiva para un teclado mecánico conceptual. Haz scroll para desarmarlo pieza por pieza, arrastra para rotarlo, escribe para presionar sus teclas y personaliza la carcasa, los keycaps y la retroiluminación en vivo.",
-        en: "Interactive 3D landing page for a concept mechanical keyboard. Scroll to take it apart piece by piece, drag to rotate, type to press its keys, and customize case, keycaps and backlight live.",
+        es: "Landing para una soda de panela ficticia que se siente pintada a mano: ilustración gouache, un solo timeline atado al scroll que lleva la botella por toda la página y un armador de six-pack que pide por WhatsApp.",
+        en: "Landing for a fictional panela soda that feels hand-painted: gouache illustration, a single scroll-driven timeline that carries the bottle across the page, and a six-pack builder that orders via WhatsApp.",
       } satisfies Bilingual,
-      stack: ["Astro", "3D", "Three.js", "WebGL", "Scrollytelling"],
-      demoHref: "https://jesusgabri3l.github.io/volt/",
-      repos: [{ label: "volt", href: "https://github.com/jesusgabri3l/volt" }],
-      codeLabel: { es: "Cómo está hecho", en: "How it's built" } satisfies Bilingual,
+      stack: ["Astro", "TypeScript", "GSAP", "Lenis"],
+      demoHref: "https://jesusgabri3l.github.io/zafra/",
+      repos: [{ label: "zafra", href: "https://github.com/jesusgabri3l/zafra" }],
     },
     {
-      title: "Chat App",
+      title: "TROCHA",
       desc: {
-        es: "Chat en tiempo real: frontend en React + Vite con Google Sign-In, backend en Express + Socket.IO sobre Firestore.",
-        en: "Realtime chat: React + Vite frontend with Google Sign-In, Express + Socket.IO backend on Firestore.",
+        es: "Landing para una renta de cuatrimotos en Villa de Leyva: la página es un recorrido en primera persona por tres rutas destapadas, con un tiquete de reserva por ruta y reserva en un toque por WhatsApp.",
+        en: "Landing for a quad bike rental in Villa de Leyva: the page is a first-person ride through three dirt routes, with a booking ticket per route and one-tap WhatsApp reservation.",
       } satisfies Bilingual,
-      stack: ["React", "TypeScript", "Node.js", "Express", "Socket.IO", "Firestore"],
-      demoHref: "https://jesusgabri3l.github.io/chat-app/",
-      repos: [
-        { label: "chat-app", href: "https://github.com/jesusgabri3l/chat-app" },
-        { label: "chat-app-backend", href: "https://github.com/jesusgabri3l/chat-app-backend" },
-      ],
-    },
-    {
-      title: "Spotify Clon",
-      desc: {
-        es: "Cliente de la Spotify Web API con React, TypeScript y MobX — explora tu biblioteca, busca artistas y discografías, autenticado con OAuth PKCE.",
-        en: "Spotify Web API client built with React, TypeScript and MobX — browse your library, search artists and discographies, authenticated via OAuth PKCE.",
-      } satisfies Bilingual,
-      stack: ["React", "TypeScript", "MobX", "OAuth PKCE"],
-      demoHref: "https://spotify-clon-jade.vercel.app/",
-      repos: [{ label: "spotify-clon", href: "https://github.com/jesusgabri3l/spotify-clon" }],
+      stack: ["Astro", "GSAP", "Lenis", "Scrollytelling"],
+      demoHref: "https://trocha-demo.vercel.app/",
+      repos: [{ label: "trocha", href: "https://github.com/jesusgabri3l/trocha" }],
     },
   ],
 };
