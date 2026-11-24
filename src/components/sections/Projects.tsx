@@ -1,8 +1,11 @@
+import { Button } from "@/components/Button";
 import { projects } from "@/lib/content";
 import { useLang } from "@/lib/lang-context";
+import { pathFor } from "@/lib/site";
 
 export function Projects() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
+  const featured = projects.items.filter((p) => "featured" in p && p.featured);
 
   return (
     <section
@@ -17,7 +20,7 @@ export function Projects() {
           {t(projects.title)}
         </h2>
         <div className="grid grid-cols-1 gap-px bg-cream/22 sm:grid-cols-2">
-          {projects.items.map((p, i) => (
+          {featured.map((p, i) => (
             <article
               key={p.title}
               className="flex min-h-[clamp(150px,24vh,220px)] flex-col gap-1.5 bg-ink p-3"
@@ -64,6 +67,9 @@ export function Projects() {
             </article>
           ))}
         </div>
+        <Button href={pathFor(lang, "/proyectos")} className="mt-4">
+          {t(projects.viewAllLabel)} →
+        </Button>
       </div>
     </section>
   );
