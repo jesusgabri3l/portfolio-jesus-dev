@@ -56,7 +56,7 @@ export function Projects() {
                     rel="noreferrer"
                     className="inline-flex min-h-6 items-center underline decoration-cream/40 underline-offset-2 hover:decoration-cream"
                   >
-                    {t(p.codeLabel ?? projects.codeLabel)}
+                    {t(projects.codeLabel)}
                     {p.repos.length > 1 ? ` (${r.label})` : ""} ↗
                   </a>
                 ))}
