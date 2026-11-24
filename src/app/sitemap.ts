@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { CONTENT_UPDATED_AT, SITE_URL, absoluteUrl, languageAlternates, locales } from "@/lib/site";
+import { CONTENT_UPDATED_AT, absoluteUrl, languageAlternates, locales, pathFor } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const paths = ["", "/privacy", "/cotiza", "/proyectos"];
@@ -11,7 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ),
     };
     return locales.map((lang) => ({
-      url: `${SITE_URL}/${lang}${path}`,
+      url: absoluteUrl(pathFor(lang, path)),
       lastModified: CONTENT_UPDATED_AT,
       alternates,
     }));

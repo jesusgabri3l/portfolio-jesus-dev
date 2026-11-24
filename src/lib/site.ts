@@ -1,6 +1,6 @@
 export const SITE_URL = "https://jesusgabriel.dev";
 export const GA_MEASUREMENT_ID = "G-0G5WS1QN6S";
-export const CONTENT_UPDATED_AT = "2026-11-02";
+export const CONTENT_UPDATED_AT = "2026-11-24";
 
 export const locales = ["en", "es"] as const;
 export type Lang = (typeof locales)[number];
@@ -11,7 +11,13 @@ export const hasLocale = (value: string): value is Lang =>
 
 export const otherLang = (lang: Lang): Lang => (lang === "es" ? "en" : "es");
 
-export const pathFor = (lang: Lang, path = "") => `/${lang}${path}`;
+// English URLs for routes whose folder is in Spanish; next.config.ts rewrites them back.
+const localizedSlugs: Record<string, Partial<Record<Lang, string>>> = {
+  "/cotiza": { en: "/quote" },
+  "/proyectos": { en: "/projects" },
+};
+
+export const pathFor = (lang: Lang, path = "") => `/${lang}${localizedSlugs[path]?.[lang] ?? path}`;
 
 export const absoluteUrl = (path: string) => `${SITE_URL}${path}`;
 
