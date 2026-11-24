@@ -10,6 +10,8 @@ export const nav: Bilingual[] = [
   { es: "Contacto", en: "Contact" },
 ];
 
+export const quoteCta = { es: "Cotiza tu proyecto", en: "Get a quote" } satisfies Bilingual;
+
 export const hero = {
   name: { es: ["JESÚS", "GABRIEL"], en: ["JESUS", "GABRIEL"] },
   role: {

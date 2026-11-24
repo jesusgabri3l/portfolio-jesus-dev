@@ -1,6 +1,8 @@
 import Image from "next/image";
-import { hero } from "@/lib/content";
+import { hero, quoteCta } from "@/lib/content";
 import { useLang } from "@/lib/lang-context";
+import { Button } from "@/components/Button";
+import { pathFor } from "@/lib/site";
 
 export function Hero() {
   const { lang, t } = useLang();
@@ -30,6 +32,9 @@ export function Hero() {
           <div className="mt-2 font-mono text-[clamp(11px,1.35vw,15px)] uppercase tracking-[0.1em] opacity-70">
             {t(hero.tagline)}
           </div>
+          <Button href={pathFor(lang, "/cotiza")} sectionBg="light" className="mt-6">
+            {t(quoteCta)}
+          </Button>
         </div>
         <Image
           src="/images/pose-hero.png"

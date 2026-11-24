@@ -1,4 +1,4 @@
-import { contact } from "@/lib/content";
+import { contact, quoteCta } from "@/lib/content";
 import { useLang } from "@/lib/lang-context";
 import { Button } from "@/components/Button";
 import { CookiePreferencesButton } from "@/components/consent/CookiePreferencesButton";
@@ -41,9 +41,14 @@ export function Contact() {
               </a>
             ))}
           </div>
-          <Button href={t(contact.cvHref)} download sectionBg="light" variant="secondary" className="mt-6">
-            {t(contact.cvLabel)}
-          </Button>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Button href={pathFor(lang, "/cotiza")} sectionBg="light">
+              {t(quoteCta)}
+            </Button>
+            <Button href={t(contact.cvHref)} download sectionBg="light" variant="secondary">
+              {t(contact.cvLabel)}
+            </Button>
+          </div>
           <footer className="mt-6 flex flex-wrap gap-x-5 gap-y-2 font-mono text-[11px] uppercase tracking-[0.1em]">
             <Link href={pathFor(lang, "/privacy")} className="underline underline-offset-2">
               {uiCopy[lang].privacy}

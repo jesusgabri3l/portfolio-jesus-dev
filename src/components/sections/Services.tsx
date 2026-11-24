@@ -1,9 +1,10 @@
-import { services } from "@/lib/content";
+import { quoteCta, services } from "@/lib/content";
 import { useLang } from "@/lib/lang-context";
 import { Button } from "@/components/Button";
+import { pathFor } from "@/lib/site";
 
 export function Services({ onContactClick }: { onContactClick?: () => void }) {
-  const { t } = useLang();
+  const { lang, t } = useLang();
 
   return (
     <section
@@ -35,7 +36,10 @@ export function Services({ onContactClick }: { onContactClick?: () => void }) {
         </div>
         <div className="mt-9 flex flex-wrap items-center gap-4">
           <span className="font-display text-[clamp(16px,1.8vw,22px)]">{t(services.ctaLine)}</span>
-          <Button sectionBg="light" onClick={onContactClick}>
+          <Button sectionBg="light" href={pathFor(lang, "/cotiza")}>
+            {t(quoteCta)}
+          </Button>
+          <Button sectionBg="light" variant="secondary" onClick={onContactClick}>
             {t(services.ctaButton)}
           </Button>
         </div>
