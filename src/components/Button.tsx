@@ -33,8 +33,11 @@ export function Button({
       : "border border-ink/40 px-3.5 py-2 text-ink/70 hover:text-ink hover:border-ink";
 
   const classes = `${base} ${variant === "primary" ? primary : secondary} ${className}`;
+  // Inline because the unlayered `a { color: inherit }` in globals.css beats Tailwind's text-* utilities.
   const style =
-    variant === "primary" && sectionBg === "dark" ? { color: "var(--color-ink)" } : undefined;
+    variant === "primary"
+      ? { color: sectionBg === "dark" ? "var(--color-ink)" : "var(--color-cream)" }
+      : undefined;
 
   if (href) {
     return (
