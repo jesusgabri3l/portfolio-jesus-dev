@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { CONTENT_UPDATED_AT, SITE_URL, absoluteUrl, languageAlternates, locales } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const paths = ["", "/privacy"];
+  const paths = ["", "/privacy", "/cotiza"];
 
   return paths.flatMap((path) => {
     const alternates = {
